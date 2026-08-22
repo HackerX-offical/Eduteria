@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clayout_card_page_msg_container"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/pwe_layout_card_page_message_opened"/>
+    <ImageView
+        android:id="@+id/img_close_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_pwe_note_close"
+        app:layout_anchor="@+id/linear_card_page_msg_bottom_sheet"
+        app:layout_anchorGravity="end|top"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

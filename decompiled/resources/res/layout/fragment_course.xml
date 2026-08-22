@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/background_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courseListRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp3"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_above="@+id/buttonLow"
+        android:overScrollMode="never"/>
+    <TextView
+        android:textSize="@dimen/sub_heading_text_size"
+        android:textColor="@color/black_white_text"
+        android:gravity="center"
+        android:id="@+id/errorTV"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="@dimen/dp60"/>
+    <include layout="@layout/layout_buy_button"/>
+</RelativeLayout>

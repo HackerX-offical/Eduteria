@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comboRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp6"
+        android:layout_marginStart="@dimen/dp6"
+        android:layout_marginEnd="@dimen/dp6"
+        android:nestedScrollingEnabled="false"/>
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/view_all"
+        android:padding="@dimen/dp16"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_all_combo"
+        android:layout_below="@+id/comboRV"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/amazon_ember_bd"/>
+    <include layout="@layout/no_data_found"/>
+</RelativeLayout>

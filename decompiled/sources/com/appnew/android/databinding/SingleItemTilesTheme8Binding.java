@@ -1,0 +1,56 @@
+package com.appnew.android.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.eduteria.app.app.R;
+
+/* JADX INFO: loaded from: classes6.dex */
+public final class SingleItemTilesTheme8Binding implements ViewBinding {
+    public final LinearLayout parentBottom;
+    private final LinearLayout rootView;
+    public final TextView tilesTextTv;
+    public final LinearLayout tourLl;
+
+    private SingleItemTilesTheme8Binding(LinearLayout rootView, LinearLayout parentBottom, TextView tilesTextTv, LinearLayout tourLl) {
+        this.rootView = rootView;
+        this.parentBottom = parentBottom;
+        this.tilesTextTv = tilesTextTv;
+        this.tourLl = tourLl;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+
+    public static SingleItemTilesTheme8Binding inflate(LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    public static SingleItemTilesTheme8Binding inflate(LayoutInflater inflater, ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.single_item_tiles_theme8, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    public static SingleItemTilesTheme8Binding bind(View rootView) {
+        LinearLayout linearLayout = (LinearLayout) rootView;
+        int i = R.id.tilesTextTv;
+        TextView textView = (TextView) ViewBindings.findChildViewById(rootView, R.id.tilesTextTv);
+        if (textView != null) {
+            i = R.id.tour_ll;
+            LinearLayout linearLayout2 = (LinearLayout) ViewBindings.findChildViewById(rootView, R.id.tour_ll);
+            if (linearLayout2 != null) {
+                return new SingleItemTilesTheme8Binding(linearLayout, linearLayout, textView, linearLayout2);
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(i)));
+    }
+}

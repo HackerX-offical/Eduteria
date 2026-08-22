@@ -1,0 +1,46 @@
+package com.appnew.android.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ScrollView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.appnew.android.player.customview.ExoSpeedDemo.TrackSelectionView;
+import com.eduteria.app.app.R;
+
+/* JADX INFO: loaded from: classes6.dex */
+public final class CustomExoTrackSelectionDialogBinding implements ViewBinding {
+    public final TrackSelectionView exoTrackSelectionView;
+    private final ScrollView rootView;
+
+    private CustomExoTrackSelectionDialogBinding(ScrollView rootView, TrackSelectionView exoTrackSelectionView) {
+        this.rootView = rootView;
+        this.exoTrackSelectionView = exoTrackSelectionView;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public ScrollView getRoot() {
+        return this.rootView;
+    }
+
+    public static CustomExoTrackSelectionDialogBinding inflate(LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    public static CustomExoTrackSelectionDialogBinding inflate(LayoutInflater inflater, ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.custom_exo_track_selection_dialog, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    public static CustomExoTrackSelectionDialogBinding bind(View rootView) {
+        TrackSelectionView trackSelectionView = (TrackSelectionView) ViewBindings.findChildViewById(rootView, R.id.exo_track_selection_view);
+        if (trackSelectionView != null) {
+            return new CustomExoTrackSelectionDialogBinding((ScrollView) rootView, trackSelectionView);
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(R.id.exo_track_selection_view)));
+    }
+}

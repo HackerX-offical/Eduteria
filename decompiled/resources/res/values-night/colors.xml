@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_bottom_nav">#50ffffff</color>
+    <color name="button_left">@color/colorPrimaryDark</color>
+    <color name="button_right">@color/colorPrimaryDark</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorPrimaryDark">#f1f1f1</color>
+    <color name="colorWhite">#000000</color>
+    <color name="darkColorPrimary">#70ffffff</color>
+    <color name="gradient_light_blue_color">@color/theme_and_header_color</color>
+    <color name="headersColor">#b5ffffff</color>
+    <color name="lightColorPrimary">#20ffffff</color>
+    <color name="profile_text_color">#222222</color>
+    <color name="theme_and_header_color">#ffffff</color>
+    <color name="theme_text_color">#ffffff</color>
+    <color name="whiteApp">#000000</color>
+</resources>

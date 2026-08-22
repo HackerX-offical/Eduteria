@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/dp10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/popupImage"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp18"
+        android:src="@drawable/edit"
+        android:tint="@color/black"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/popupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu item 1"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_toEndOf="@+id/popupImage"/>
+</RelativeLayout>

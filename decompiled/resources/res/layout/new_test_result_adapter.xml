@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:tag="layout/new_test_result_adapter_0"
+    android:background="@drawable/test_result"
+    android:layout_width="@dimen/dp140"
+    android:layout_height="@dimen/dp160">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/test_image"
+        android:tag="binding_1"
+        android:layout_width="@dimen/dp60"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp15"
+        android:src="@mipmap/square_placeholder"
+        android:layout_centerHorizontal="true"
+        app:civ_border_color="@color/colorPrimaryDark"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/test_name"
+        android:tag="binding_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gate Exam"
+        android:maxLines="1"
+        android:layout_below="@+id/test_image"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/inter_bold"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#7f7f8a"
+        android:gravity="center"
+        android:id="@+id/test_attempts"
+        android:tag="binding_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp2"
+        android:maxLines="1"
+        android:layout_below="@+id/test_name"
+        android:fontFamily="@font/inter_regular"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/test_result"
+        android:tag="binding_4"
+        android:background="@drawable/black_round"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="26dp"
+        android:layout_marginTop="@dimen/dp2"
+        android:text="View Result"
+        android:layout_below="@+id/test_attempts"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/inter_regular"
+        android:textAlignment="center"/>
+</RelativeLayout>

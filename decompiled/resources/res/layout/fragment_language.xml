@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ic_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_group"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/chose_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:text="Choose Your Preferred Language"
+        android:layout_below="@+id/ic_group"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/inter_bold"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:id="@+id/select_txt"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="Please Select your Language"
+        android:layout_below="@+id/chose_txt"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/inter_regular"/>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_below="@+id/select_txt">
+        <ImageView
+            android:layout_gravity="bottom"
+            android:id="@+id/english_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/english_intro"
+            android:layout_marginEnd="@dimen/dp20"/>
+        <ImageView
+            android:layout_gravity="bottom"
+            android:id="@+id/hindi_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hindi_img"
+            android:layout_marginStart="@dimen/dp20"/>
+    </LinearLayout>
+</RelativeLayout>

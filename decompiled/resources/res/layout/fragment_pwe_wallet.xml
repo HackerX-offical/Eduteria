@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/pwe_custom_card_gray_background"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:elevation="2dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/pwe_title_color"
+            android:gravity="center"
+            android:id="@+id/text_card_type_label"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Wallets"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linear_wallet_view_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.easebuzz.payment.kit.ExpandableHeightGridView
+                    android:id="@+id/cash_card_grid"
+                    android:background="@color/pwe_fragment_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="3"/>
+            </LinearLayout>
+            <include layout="@layout/pwe_pay_button_layout"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

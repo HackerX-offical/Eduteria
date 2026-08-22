@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/no_data_found"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="vertical"
+        android:id="@+id/comment_recyerler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomlayout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:stackFromEnd="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/bottomlayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp5">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:background="@color/light_quiz_grey"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5">
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <EditText
+                    android:textSize="@dimen/extrasmall_text_size_12"
+                    android:textColorHint="@color/greayrefcode_dark"
+                    android:id="@+id/et_message"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/dp12"
+                    android:paddingBottom="@dimen/dp5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Post Comment"
+                    android:maxLines="2"/>
+            </RelativeLayout>
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/iv_send"
+                android:padding="@dimen/dp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send_ic_new"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

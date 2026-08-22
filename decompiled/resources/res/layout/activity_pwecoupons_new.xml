@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/linear_pwe_global_root"
+    android:background="@color/pwe_app_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:fitsSystemWindows="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear_root_header"
+                android:layout_width="match_parent"
+                android:layout_height="160dp">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/pwe_layout_common_header_new"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear_fragment_holder_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/linear_fragment_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <include layout="@layout/pwe_layout_common_footer_new"/>
+            </LinearLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </ScrollView>
+    <include layout="@layout/pwe_layout_card_page_message_closed"/>
+    <include layout="@layout/pwe_layout_card_page_message_bottom_sheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,61 @@
+package androidx.compose.foundation.text.input.internal.selection;
+
+import androidx.compose.ui.platform.Clipboard;
+import kotlin.Metadata;
+import org.jivesoftware.smackx.disco.packet.DiscoverItems;
+
+/* JADX INFO: compiled from: TextFieldSelectionState.android.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0002\b\u0001\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005J\u000e\u0010\u000e\u001a\u00020\u000fH\u0086@¢\u0006\u0002\u0010\u0010R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0007X\u0082\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\t\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\b\n\u0010\u000bR\u0011\u0010\f\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\b\r\u0010\u000b¨\u0006\u0011"}, d2 = {"Landroidx/compose/foundation/text/input/internal/selection/ClipboardPasteState;", "", "clipboard", "Landroidx/compose/ui/platform/Clipboard;", "<init>", "(Landroidx/compose/ui/platform/Clipboard;)V", "_hasClip", "", "_hasText", "hasText", "getHasText", "()Z", "hasClip", "getHasClip", DiscoverItems.Item.UPDATE_ACTION, "", "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "foundation"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class ClipboardPasteState {
+    public static final int $stable = 8;
+    private boolean _hasClip;
+    private boolean _hasText;
+    private final Clipboard clipboard;
+
+    public ClipboardPasteState(Clipboard clipboard) {
+        this.clipboard = clipboard;
+    }
+
+    /* JADX INFO: renamed from: getHasText, reason: from getter */
+    public final boolean get_hasText() {
+        return this._hasText;
+    }
+
+    /* JADX INFO: renamed from: getHasClip, reason: from getter */
+    public final boolean get_hasClip() {
+        return this._hasClip;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:9:0x0025  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object update(kotlin.coroutines.Continuation<? super kotlin.Unit> r2) {
+        /*
+            r1 = this;
+            androidx.compose.ui.platform.Clipboard r2 = r1.clipboard
+            android.content.ClipboardManager r2 = r2.getNativeClipboard()
+            boolean r2 = r2.hasPrimaryClip()
+            r1._hasClip = r2
+            if (r2 == 0) goto L25
+            androidx.compose.ui.platform.Clipboard r2 = r1.clipboard
+            android.content.ClipboardManager r2 = r2.getNativeClipboard()
+            android.content.ClipDescription r2 = r2.getPrimaryClipDescription()
+            if (r2 == 0) goto L25
+            java.lang.String r0 = "text/*"
+            boolean r2 = r2.hasMimeType(r0)
+            r0 = 1
+            if (r2 != r0) goto L25
+            goto L26
+        L25:
+            r0 = 0
+        L26:
+            r1._hasText = r0
+            kotlin.Unit r2 = kotlin.Unit.INSTANCE
+            return r2
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.compose.foundation.text.input.internal.selection.ClipboardPasteState.update(kotlin.coroutines.Continuation):java.lang.Object");
+    }
+}

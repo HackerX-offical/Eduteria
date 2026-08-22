@@ -1,0 +1,21 @@
+package com.anychart.graphics.vector.text;
+
+import com.clevertap.android.sdk.Constants;
+import java.util.Locale;
+
+/* JADX INFO: loaded from: classes4.dex */
+public enum FontStyle {
+    ITALIC("italic"),
+    NORMAL(Constants.PRIORITY_NORMAL),
+    OBLIQUE("oblique");
+
+    private final String value;
+
+    FontStyle(String str) {
+        this.value = str;
+    }
+
+    public String getJsBase() {
+        return String.format(Locale.US, "\"%s\"", this.value);
+    }
+}

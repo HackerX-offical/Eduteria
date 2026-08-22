@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp10"
+    android:layout_marginEnd="@dimen/dp10"
+    app:cardCornerRadius="@dimen/dp17">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/placeholder"
+            android:scaleType="fitXY"
+            android:layout_above="@+id/share_rl"/>
+        <RelativeLayout
+            android:gravity="center"
+            android:id="@+id/share_rl"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/dp25"
+                    android:layout_height="25dp"
+                    android:layout_margin="@dimen/dp10"
+                    android:src="0x7f08065c"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/whatsapp_share"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/inter_regular"
+                    android:layout_toEndOf="@+id/image"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

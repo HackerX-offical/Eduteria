@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/home_tab_gradient2_start_color"
+        android:endColor="@color/home_tab_gradient2_end_color"
+        android:angle="180"/>
+    <corners
+        android:topLeftRadius="@dimen/dp5"
+        android:topRightRadius="@dimen/dp5"
+        android:bottomLeftRadius="@dimen/dp5"
+        android:bottomRightRadius="@dimen/dp5"/>
+</shape>

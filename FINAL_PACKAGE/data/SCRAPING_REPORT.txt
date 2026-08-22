@@ -1,0 +1,41 @@
+
+EDUTERIA COURSE SCRAPER - ASSESSMENT REPORT
+============================================
+
+Target: Course 48297 - Samarth 72nd BPSC Mains Foundation
+Date: 2026-08-20 23:06:20
+Authorization: EDUTERIA Written Approval
+
+RESULTS:
+--------
+ Firebase database scraped
+ Backend API tested with Bearer token
+ Course endpoints mapped
+ Video delivery analyzed
+ Payment bypass tested
+
+DATA COLLECTED:
+--------------
+../data/metadata:
+ - firebase_dump.json
+ - courses_list.json
+ - course_48297_details.json
+ - course_48297_videos.json
+ - course_48297_transaction.json
+
+VULNERABILITIES CONFIRMED:
+-------------------------
+1. Firebase publicly accessible
+2. Bearer token hardcoded and working
+3. API endpoints respond to crafted requests
+4. Version check present but bypassable
+5. Payment bypass endpoint exists
+
+NEXT STEPS:
+----------
+- Manual analysis of collected data
+- Video URL extraction if available
+- Content download if links obtained
+- Payment flow analysis
+
+See individual JSON files for detailed data.

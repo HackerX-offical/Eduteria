@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/dp10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tvName"
+        android:background="@drawable/bg_card_bottom_corner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"/>
+</LinearLayout>

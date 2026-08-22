@@ -1,0 +1,81 @@
+package androidx.compose.runtime.composer.linkbuffer;
+
+import androidx.compose.runtime.ComposerKt;
+import androidx.compose.runtime.tooling.CompositionGroup;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import java.util.ArrayList;
+import java.util.Iterator;
+import kotlin.KotlinNothingValueException;
+import kotlin.Metadata;
+import kotlin.jvm.internal.markers.KMappedMarker;
+import org.jivesoftware.smack.packet.Message;
+import org.mozilla.javascript.ES6Iterator;
+
+/* JADX INFO: compiled from: SlotTable.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010(\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0010\u000b\n\u0002\b\u0002\b\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B'\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n¢\u0006\u0004\b\u000b\u0010\fJ\t\u0010\u0017\u001a\u00020\u0018H\u0096\u0002J\t\u0010\u0019\u001a\u00020\u0002H\u0096\u0002R\u0011\u0010\u0003\u001a\u00020\u0004¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0007\u001a\u00020\b¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u0011\u0010\t\u001a\u00020\n¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0014R\u000e\u0010\u0015\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u001a"}, d2 = {"Landroidx/compose/runtime/composer/linkbuffer/SourceInformationGroupIterator;", "", "Landroidx/compose/runtime/tooling/CompositionGroup;", "table", "Landroidx/compose/runtime/composer/linkbuffer/SlotTable;", Message.Thread.PARENT_ATTRIBUTE_NAME, "", "group", "Landroidx/compose/runtime/composer/linkbuffer/LinkGroupSourceInformation;", "path", "Landroidx/compose/runtime/composer/linkbuffer/SourceInformationGroupPath;", "<init>", "(Landroidx/compose/runtime/composer/linkbuffer/SlotTable;ILandroidx/compose/runtime/composer/linkbuffer/LinkGroupSourceInformation;Landroidx/compose/runtime/composer/linkbuffer/SourceInformationGroupPath;)V", "getTable", "()Landroidx/compose/runtime/composer/linkbuffer/SlotTable;", "getParent", "()I", "getGroup", "()Landroidx/compose/runtime/composer/linkbuffer/LinkGroupSourceInformation;", "getPath", "()Landroidx/compose/runtime/composer/linkbuffer/SourceInformationGroupPath;", "version", FirebaseAnalytics.Param.INDEX, "hasNext", "", ES6Iterator.NEXT_METHOD, "runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+final class SourceInformationGroupIterator implements Iterator<CompositionGroup>, KMappedMarker {
+    private final LinkGroupSourceInformation group;
+    private int index;
+    private final int parent;
+    private final SourceInformationGroupPath path;
+    private final SlotTable table;
+    private final int version;
+
+    @Override // java.util.Iterator
+    public void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    public SourceInformationGroupIterator(SlotTable slotTable, int i, LinkGroupSourceInformation linkGroupSourceInformation, SourceInformationGroupPath sourceInformationGroupPath) {
+        this.table = slotTable;
+        this.parent = i;
+        this.group = linkGroupSourceInformation;
+        this.path = sourceInformationGroupPath;
+        this.version = slotTable.getVersion();
+    }
+
+    public final SlotTable getTable() {
+        return this.table;
+    }
+
+    public final int getParent() {
+        return this.parent;
+    }
+
+    public final LinkGroupSourceInformation getGroup() {
+        return this.group;
+    }
+
+    public final SourceInformationGroupPath getPath() {
+        return this.path;
+    }
+
+    @Override // java.util.Iterator
+    public boolean hasNext() {
+        ArrayList<Object> groups = this.group.getGroups();
+        return groups != null && this.index < groups.size();
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // java.util.Iterator
+    public CompositionGroup next() {
+        Object obj;
+        ArrayList<Object> groups = this.group.getGroups();
+        if (groups != null) {
+            int i = this.index;
+            this.index = i + 1;
+            obj = groups.get(i);
+        } else {
+            obj = null;
+        }
+        if (obj instanceof LinkAnchor) {
+            return new SlotTableGroup(this.table, ((LinkAnchor) obj).getAddress(), this.version);
+        }
+        if (obj instanceof LinkGroupSourceInformation) {
+            return new SourceInformationSlotTableGroup(this.table, this.parent, (LinkGroupSourceInformation) obj, new RelativeGroupPath(this.path, this.index - 1));
+        }
+        ComposerKt.composeRuntimeError("Unexpected group information structure");
+        throw new KotlinNothingValueException();
+    }
+}

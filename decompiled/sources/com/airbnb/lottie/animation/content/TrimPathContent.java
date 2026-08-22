@@ -1,0 +1,79 @@
+package com.airbnb.lottie.animation.content;
+
+import com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation;
+import com.airbnb.lottie.animation.keyframe.FloatKeyframeAnimation;
+import com.airbnb.lottie.model.content.ShapeTrimPath;
+import com.airbnb.lottie.model.layer.BaseLayer;
+import java.util.ArrayList;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class TrimPathContent implements Content, BaseKeyframeAnimation.AnimationListener {
+    private final BaseKeyframeAnimation<?, Float> endAnimation;
+    private final boolean hidden;
+
+    /* JADX INFO: renamed from: listeners, reason: collision with root package name */
+    private final List<BaseKeyframeAnimation.AnimationListener> f296listeners = new ArrayList();
+    private final String name;
+    private final BaseKeyframeAnimation<?, Float> offsetAnimation;
+    private final BaseKeyframeAnimation<?, Float> startAnimation;
+    private final ShapeTrimPath.Type type;
+
+    @Override // com.airbnb.lottie.animation.content.Content
+    public void setContents(List<Content> list, List<Content> list2) {
+    }
+
+    public TrimPathContent(BaseLayer baseLayer, ShapeTrimPath shapeTrimPath) {
+        this.name = shapeTrimPath.getName();
+        this.hidden = shapeTrimPath.isHidden();
+        this.type = shapeTrimPath.getType();
+        FloatKeyframeAnimation floatKeyframeAnimationCreateAnimation = shapeTrimPath.getStart().createAnimation();
+        this.startAnimation = floatKeyframeAnimationCreateAnimation;
+        FloatKeyframeAnimation floatKeyframeAnimationCreateAnimation2 = shapeTrimPath.getEnd().createAnimation();
+        this.endAnimation = floatKeyframeAnimationCreateAnimation2;
+        FloatKeyframeAnimation floatKeyframeAnimationCreateAnimation3 = shapeTrimPath.getOffset().createAnimation();
+        this.offsetAnimation = floatKeyframeAnimationCreateAnimation3;
+        baseLayer.addAnimation(floatKeyframeAnimationCreateAnimation);
+        baseLayer.addAnimation(floatKeyframeAnimationCreateAnimation2);
+        baseLayer.addAnimation(floatKeyframeAnimationCreateAnimation3);
+        floatKeyframeAnimationCreateAnimation.addUpdateListener(this);
+        floatKeyframeAnimationCreateAnimation2.addUpdateListener(this);
+        floatKeyframeAnimationCreateAnimation3.addUpdateListener(this);
+    }
+
+    @Override // com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation.AnimationListener
+    public void onValueChanged() {
+        for (int i = 0; i < this.f296listeners.size(); i++) {
+            this.f296listeners.get(i).onValueChanged();
+        }
+    }
+
+    @Override // com.airbnb.lottie.animation.content.Content
+    public String getName() {
+        return this.name;
+    }
+
+    void addListener(BaseKeyframeAnimation.AnimationListener animationListener) {
+        this.f296listeners.add(animationListener);
+    }
+
+    ShapeTrimPath.Type getType() {
+        return this.type;
+    }
+
+    public BaseKeyframeAnimation<?, Float> getStart() {
+        return this.startAnimation;
+    }
+
+    public BaseKeyframeAnimation<?, Float> getEnd() {
+        return this.endAnimation;
+    }
+
+    public BaseKeyframeAnimation<?, Float> getOffset() {
+        return this.offsetAnimation;
+    }
+
+    public boolean isHidden() {
+        return this.hidden;
+    }
+}

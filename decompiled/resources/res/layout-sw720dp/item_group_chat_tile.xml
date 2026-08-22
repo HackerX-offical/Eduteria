@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCv"
+    android:padding="@dimen/dp5"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginStart="@dimen/dp7"
+    android:layout_marginEnd="@dimen/dp7"
+    app:cardCornerRadius="@dimen/dp7"
+    app:cardElevation="@dimen/dp3"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/group"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@mipmap/group"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp12"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:id="@+id/groupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:text="Hululu"
+            android:maxLines="2"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/inter_bold"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp12"
+            android:layout_toEndOf="@+id/group"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

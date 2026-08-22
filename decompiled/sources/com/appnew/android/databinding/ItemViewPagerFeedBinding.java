@@ -1,0 +1,60 @@
+package com.appnew.android.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import androidx.cardview.widget.CardView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.eduteria.app.app.R;
+
+/* JADX INFO: loaded from: classes6.dex */
+public final class ItemViewPagerFeedBinding implements ViewBinding {
+    public final ImageView image;
+    public final ImageView imageView;
+    private final CardView rootView;
+    public final RelativeLayout shareRl;
+
+    private ItemViewPagerFeedBinding(CardView rootView, ImageView image, ImageView imageView, RelativeLayout shareRl) {
+        this.rootView = rootView;
+        this.image = image;
+        this.imageView = imageView;
+        this.shareRl = shareRl;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public CardView getRoot() {
+        return this.rootView;
+    }
+
+    public static ItemViewPagerFeedBinding inflate(LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    public static ItemViewPagerFeedBinding inflate(LayoutInflater inflater, ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.item_view_pager_feed, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    public static ItemViewPagerFeedBinding bind(View rootView) {
+        int i = R.id.image;
+        ImageView imageView = (ImageView) ViewBindings.findChildViewById(rootView, R.id.image);
+        if (imageView != null) {
+            i = R.id.imageView;
+            ImageView imageView2 = (ImageView) ViewBindings.findChildViewById(rootView, R.id.imageView);
+            if (imageView2 != null) {
+                i = R.id.share_rl;
+                RelativeLayout relativeLayout = (RelativeLayout) ViewBindings.findChildViewById(rootView, R.id.share_rl);
+                if (relativeLayout != null) {
+                    return new ItemViewPagerFeedBinding((CardView) rootView, imageView, imageView2, relativeLayout);
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(i)));
+    }
+}

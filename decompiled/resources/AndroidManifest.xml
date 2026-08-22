@@ -1,0 +1,1788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="53"
+    android:versionName="1.5.3"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    android:requiredSplitTypes="base__abi,base__density"
+    android:splitTypes=""
+    package="com.eduteria.app.app"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="36"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_DOCUMENTS"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <queries>
+        <package android:name="com.paytm.pgsdk.TransactionManager.PAYTM_APP_PACKAGE"/>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+            <category android:name="android.intent.category.OPENABLE"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.facebook.katana"/>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+        <intent>
+            <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="upi"/>
+        </intent>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="net.one97.paytm"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="in.org.npci.upiapp"/>
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <package android:name="com.whatsapp"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data
+                android:mimeType="*/*"
+                android:scheme="*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data
+                android:mimeType="*/*"
+                android:scheme="upi"
+                android:host="pay"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="rzp.device_token.share"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <permission
+        android:name="com.eduteria.app.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.eduteria.app.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE"/>
+    <application
+        android:theme="@style/AppThemeOwn"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.appnew.android.Utils.MakeMyExam"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="whateverString"
+        android:requestLegacyExternalStorage="true"
+        android:enableOnBackInvokedCallback="true">
+        <activity
+            android:name="com.appnew.android.testmodulessc.TestBaseActivitySSCPattern"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.TestActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.LoggedOutUserActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.appnew.android.loginRevamp.Activity.ChooseCourseNewActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.loginRevamp.Activity.LoginGoogleNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.appnew.android.loginRevamp.Activity.LoginCatNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.loginRevamp.Activity.SignInNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.NotificationDeepLinkActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:hardwareAccelerated="false"/>
+        <activity
+            android:name="com.appnew.android.PDFViewerJS.PDFViewerJS"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.socket.activity.GroupChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.socket.activity.PinnedChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.socket.activity.ChatImageViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.TeacherTimeTable.Activity.Noticeboard"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Educator.EducatorsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.PdfListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.testmodule.activity.TestReportsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.TeacherTimeTable.TimeTableActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.TeacherTimeTable.Activity.StudentListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Theme.UserAttendanceActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.book_theme_2.activity.BookStoreActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.book_theme_2.activity.MyBagActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.CourseChat.CoursesListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Login.ChooseCourseActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/AppThemeOwn.NoActionBar"
+            android:label="@string/title_activity_test_report"
+            android:name="com.appnew.android.TestRegisteration.TestReportActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.TestRegisteration.RegisterPreview"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.base.ChangeLanguageActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.player.AudioPlayerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.sme.activity.SMEActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.feeds.activity.FeedViewPager"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""/>
+        </activity>
+        <activity
+            android:name="com.appnew.android.Intro.Activity.CategoryActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""/>
+        </activity>
+        <activity
+            android:name="com.appnew.android.Cart.Activity.RewardActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.NewResult.Activity.TopperListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Zoom.NewProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Payment.billdesk_payment_gateway.BillDeskPaymentScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.NewResult.Activity.GraphActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.appnew.android.Profile.ProfileActivityTheme8"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.feeds.activity.FeedDetails"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.encVideoPlayer.PlayerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme8"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.feeds.activity.FeedsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.feeds.activity.FeedVideoPlayer"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Intro.Activity.IntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.feeds.activity.PinnedPostActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.folder.activity.FolderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.ComboListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.ComboSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.NewResult.Activity.ResultActrivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.PurchaseHistory.activity.InstallmentDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.DownloadPDFActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Cart.Activity.CartItemsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.RattingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.FAQActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.ViewQuestionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.BookMarkList"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.DoubtChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.GroupChatActivityFirebase"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.DoubtChatActivityFirebase"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.appnew.android.Zoom.Activity.ZoomRecodedPlayer"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.CurrentAffairInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.CurrentAffairActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.Suggestion"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Zoom.Activity.DoubtsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.appnew.android.UserHistory.ConversationReplyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.UserHistory.ViewConversationPage"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@style/AppThemeOwnMaterial"
+            android:name="com.appnew.android.UserHistory.ContactUsPage"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.PopupFormActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.FreeMockTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.testmodule.activity.SubjectiveResultActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme2"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Coupon.Activity.CouponPurchaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Coupon.Activity.EligibleCoursesActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.player.VODPlayerActivity"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="fullUser"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:enableOnBackInvokedCallback="true">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+        </activity>
+        <activity
+            android:name="com.appnew.android.Coupon.Activity.CouponActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Login.Activity.LoginGoogleActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.appnew.android.home.Activity.CourseTypeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.player.LiveStreamingYoutube"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="fullUser"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:enableOnBackInvokedCallback="true">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+        </activity>
+        <activity
+            android:name="com.appnew.android.CustomPayment.CustomPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.testmodule.activity.TestSubmissionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@android:style/Theme.Dialog"
+            android:name="com.appnew.android.player.CustommediaPlayerDialog"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Notification.NotificationDescription"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@style/AppTheme.SplashThemeNew"
+            android:name="com.appnew.android.Login.Activity.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="@string/host_link"
+                    android:pathPrefix="@string/package_name"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.Concept_newActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <receiver
+            android:name="com.appnew.android.Utils.Service.SmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.eduteria.app.app.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <service
+            android:name="com.appnew.android.player.music_player.MusicService"
+            android:exported="true"/>
+        <activity
+            android:name="com.appnew.android.PurchaseHistory.PurchaseHistory"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light"
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token"/>
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.facebook.sdk.AutoInitEnabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="true"/>
+        <activity
+            android:name="com.appnew.android.home.Activity.LibrariesUsedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Utils.ChooseLanguageInApp"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.home.Activity.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.home.Activity.ChatBotActvity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.home.Activity.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme1"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme4"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme7"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme3"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Theme.DashboardActivityTheme5"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Login.Activity.LoginCatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Login.Activity.SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.CourseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.QuizActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.home.Activity.MyLibraryActivty"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.appnew.android.LiveTest.Activity.LivetestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.LiveClass.Activity.LiveClassActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Webview.SearchRevisionVideosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Webview.RevisionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Notification.Notification"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.CreateTest.Activity.CreateTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.CourseTransfer.CourseTransferActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.MigrateUser.MigrateUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.testmodule.activity.VideoPlayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.Webview.RevisionSolutionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.CreateTest.Activity.CreateTestSolutionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.Webview.RevisionTest"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.Payment.PurchaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.Profile.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.appnew.android.testmodule.activity.TestBaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.CreateTest.Activity.TestCreateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.testmodule.activity.ViewSolutionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name="com.appnew.android.Webview.FlashcardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.PdfDetailScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.player.CustomMediaPlayer"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appnew.android.Download.DownloadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Webview.WebViewActivty"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Webview.WebViewActivtyNew"
+            android:exported="false"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Webview.PdfHtmlAcivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.Download.DownloadVideoPlayer"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appnew.android.ExtraClass.Activity.ExtraClassesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.ExtraClass.Activity.DrmExtraPlayer"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.ExtraClass.Activity.YoutubeExtraPlayer"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.ExtraClass.Activity.ExtraAwsPlayer"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appnew.android.UserHistory.UserHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.ConceptScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.WebFragActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.helpChat.HelpSupportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.helpChat.HelpChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.helpChat.HelpQueryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.MyNotesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Courses.Activity.MyNotesSelectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.appnew.android.Login.Activity.PermissionSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.player.Liveawsactivity"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="fullUser"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:enableOnBackInvokedCallback="true">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+            <meta-data
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE"
+                android:value="false"/>
+        </activity>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.JWextractor.JWVideoPlayer"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.fdemo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PlayerTheme"
+            android:label="@string/app_name"
+            android:name="com.appnew.android.Download.AudioPlayerActivty"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.appnew.android.Download.Audio.AudioPlayerService"
+            android:exported="true"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <service
+            android:name="com.appnew.android.DownloadServices.VideoDownloadService"
+            android:exported="true"
+            android:foregroundServiceType="dataSync"/>
+        <service
+            android:name="com.appnew.android.Utils.Service.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.appnew.android.Utils.Service.MyFirebaseInstanceIDService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/theme_and_header_color"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="default_channel"/>
+        <activity
+            android:name="com.appnew.android.CourseTransfer.OtpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <provider
+            android:name="com.appnew.android.Utils.StoreProvider"
+            android:exported="true"
+            android:authorities="com.eduteria.app.app.Utils.StoreProvider"/>
+        <meta-data
+            android:name="fr.maxcom.libmedia.apiKey"
+            android:value="@string/lib_media_key"/>
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="rzp.device_token.share"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/CheckoutTheme"
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <data
+                    android:scheme="io.rzp"
+                    android:host="rzp.io"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appnew.android.Zoom.ScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.appnew.android.TestRegisteration.RegisterationTest"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.appnew.android.Payment.easy_pay.EasyPayCheckout"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.billdesk.sdk.PaymentOptions"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.billdesk.sdk.BankList"/>
+        <activity
+            android:name="com.billdesk.sdk.QuickPayView"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.billdesk.sdk.CreditCardView"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.billdesk.sdk.RetryPayment"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.billdesk.sdk.PaymentWebView"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.billdesk.sdk.EmiActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@android:style/Theme.Dialog"
+            android:name="com.billdesk.utils.URLUtilActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity android:name="com.billdesk.sdk.Emerald2Activity"/>
+        <activity
+            android:theme="@android:style/Theme.Dialog"
+            android:name="com.billdesk.library.OtpDialogActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.billdesk.sdk.UpiActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.example.paytm_gateway.PaytmPaymentActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/TransparentActivityTheme"
+            android:name="com.paytm.pgsdk.AioMatchUserActivity"/>
+        <service
+            android:name="com.paytm.pgsdk.IntentServicePostNotification"
+            android:exported="false"/>
+        <service
+            android:name="com.paytm.pgsdk.IntentServicePreNotification"
+            android:exported="false"/>
+        <service
+            android:name="easypay.appinvoke.utils.EasyPayConfigDownloader"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <service
+            android:name="easypay.appinvoke.utils.AnalyticsService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity android:name="easypay.appinvoke.AnalyticsManagerInfoDisplayActivity"/>
+        <provider
+            android:name="com.canhub.cropper.CropFileProvider"
+            android:exported="false"
+            android:authorities="com.eduteria.app.app.cropper.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/library_file_paths"/>
+        </provider>
+        <service
+            android:name="info.mqtt.android.service.MqttService"
+            android:foregroundServiceType="dataSync"/>
+        <provider
+            android:name="com.clevertap.android.sdk.CleverTapFileProvider"
+            android:exported="false"
+            android:authorities="com.eduteria.app.app.clevertap.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/clevertap_notification_file_paths"/>
+        </provider>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.clevertap.android.sdk.InAppNotificationActivity"
+            android:configChanges="keyboardHidden"/>
+        <activity
+            android:theme="@style/CTInboxActivityTheme"
+            android:name="com.clevertap.android.sdk.inbox.CTInboxActivity"
+            android:configChanges="keyboardHidden"/>
+        <receiver
+            android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.clevertap.android.sdk.pushnotification.fcm.CTFirebaseMessagingReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter android:priority="-1">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.eduteria.app.app.androidx-startup">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="com.razorpay.RazorpayInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="com.razorpay.CoreInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="net.danlew.android.joda.JodaTimeInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <activity
+            android:theme="@style/com_facebook_activity_theme"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.eduteria.app.app"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.eduteria.app.app.FacebookInitProvider"/>
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.AuthenticationTokenManager.CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="7.1.0"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/Dexter.Internal.Theme.Transparent"
+            android:name="com.karumi.dexter.DexterActivity"/>
+        <activity
+            android:name="com.yaman.cc_avanue_gateway.activity.CCAvenueActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.example.easybuzz_payment_gateway.EaseBuzzPaymentActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/PWENoABar"
+            android:name="com.easebuzz.payment.kit.PWEBankPageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/PWENoABar"
+            android:label="Select Coupons"
+            android:name="com.easebuzz.payment.kit.PWECouponsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged"/>
+        <service
+            android:name="com.easebuzz.payment.kit.PWETimerService"
+            android:enabled="true"
+            android:stopWithTask="false"/>
+        <service
+            android:name="com.pallycon.widevine.service.PallyConDownloadService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="androidx.media3.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"/>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.razorpay.MagicXActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"
+            android:visibleToInstantApps="true"/>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+                android:value="true"/>
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.AppInvite.Preview"
+            android:name="com.google.android.gms.appinvite.PreviewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/ga_ad_services_config"/>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.eduteria.app.app.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <uses-library
+            android:name="android.ext.adservices"
+            android:required="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/zxing_CaptureTheme"
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"/>
+        <activity
+            android:theme="@style/CheckoutTheme"
+            android:name="com.razorpay.DeeplinkActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="razorpay"
+                    android:host="com.eduteria.app.app"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.android.vending.splits.required"
+            android:value="true"/>
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store"/>
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0"/>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="2"/>
+    </application>
+</manifest>

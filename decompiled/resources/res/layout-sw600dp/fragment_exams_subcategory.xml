@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/theme_and_header_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subcategoryExamsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp3"
+        android:layout_marginRight="@dimen/dp10"
+        android:overScrollMode="never"/>
+</FrameLayout>

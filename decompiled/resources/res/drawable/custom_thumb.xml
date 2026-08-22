@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <shape
+            android:dither="true"
+            android:visible="true"
+            android:shape="rectangle"
+            android:useLevel="false">
+            <solid android:color="@color/common_btn_gradient_end_color"/>
+            <corners android:radius="@dimen/dp100"/>
+            <size
+                android:height="18dp"
+                android:width="18dp"/>
+            <stroke
+                android:width="4dp"
+                android:color="@color/common_btn_gradient_end_color"/>
+        </shape>
+    </item>
+</selector>

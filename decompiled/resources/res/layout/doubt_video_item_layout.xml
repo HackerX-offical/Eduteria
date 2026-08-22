@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp5"
+    android:layout_marginEnd="@dimen/dp5">
+    <RelativeLayout
+        android:background="@drawable/corner_doubt_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/doubtImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/placeholder_course"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/ll_vote_btn"
+            android:padding="@dimen/dp8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doubtImageView">
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="@dimen/dp28"
+                android:layout_height="@dimen/dp28"
+                android:src="@drawable/upvote"
+                android:layout_marginEnd="@dimen/dp6"/>
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:id="@+id/voteTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upvote"
+                android:fontFamily="@font/inter_medium"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

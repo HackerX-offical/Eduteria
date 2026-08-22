@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dueEmiLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/txtTitle"
+                android:padding="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_toLeftOf="@+id/payEmi"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/inter_bold"/>
+            <Button
+                android:textSize="@dimen/post_text_size_x"
+                android:textColor="@color/commonBtnTextColor"
+                android:id="@+id/payEmi"
+                android:background="@drawable/common_round_corners_button_drawable"
+                android:padding="@dimen/dp8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12"
+                android:text="Pay Emi"
+                android:layout_weight="1"
+                android:fontFamily="@font/amazon_ember_medium"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

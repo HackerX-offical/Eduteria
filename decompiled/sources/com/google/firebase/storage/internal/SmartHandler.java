@@ -1,0 +1,45 @@
+package com.google.firebase.storage.internal;
+
+import android.os.Handler;
+import android.os.Looper;
+import com.google.android.gms.common.internal.Preconditions;
+import com.google.firebase.storage.StorageTaskScheduler;
+import java.util.concurrent.Executor;
+
+/* JADX INFO: compiled from: com.google.firebase:firebase-storage@@19.1.0 */
+/* JADX INFO: loaded from: classes9.dex */
+public class SmartHandler {
+    static boolean testMode = false;
+    private final Executor executor;
+    private final Handler handler;
+
+    public SmartHandler(Executor executor) {
+        this.executor = executor;
+        if (executor == null) {
+            if (!testMode) {
+                this.handler = new Handler(Looper.getMainLooper());
+                return;
+            } else {
+                this.handler = null;
+                return;
+            }
+        }
+        this.handler = null;
+    }
+
+    public void callBack(Runnable runnable) {
+        Preconditions.checkNotNull(runnable);
+        Handler handler = this.handler;
+        if (handler == null) {
+            Executor executor = this.executor;
+            if (executor != null) {
+                executor.execute(runnable);
+                return;
+            } else {
+                StorageTaskScheduler.getInstance().scheduleCallback(runnable);
+                return;
+            }
+        }
+        handler.post(runnable);
+    }
+}

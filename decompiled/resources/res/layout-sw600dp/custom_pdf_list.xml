@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/greayrefcode_light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartItem_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp12"
+        android:layout_marginBottom="@dimen/dp4"
+        app:cardCornerRadius="@dimen/dp4">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/dp8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+            <TextView
+                android:textSize="@dimen/dp18"
+                android:textStyle="bold"
+                android:textColor="@color/theme_and_header_color"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:id="@+id/download_pdf_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginRight="@dimen/dp5"
+                android:singleLine="true"
+                android:layout_weight="3"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/pdf"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

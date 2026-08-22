@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout-sw720dp/banner_adapter_imageview_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imge_view"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@mipmap/course_placeholder"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="10dp"
+        app:riv_oval="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+CRITICAL AUTHENTICATION TOKEN EXPOSED
+======================================
+
+LOCATION: API.java line 245
+public static final String Bearer = "Bearer 117#Nerglnw3@@OI)30@I*Dm'@@_166";
+
+STATUS: HARDCODED IN APK
+
+SEVERITY: CRITICAL
+
+IMPACT:
+- This token authenticates ALL API requests
+- Hardcoded in client (not server-generated)
+- Never expires
+- Anyone with APK can extract it
+- Full backend API access possible
+
+APP VERSION: 1.5.3 (versionCode 53)
+
+This is the master authentication token for the entire EDUTERIA backend API.

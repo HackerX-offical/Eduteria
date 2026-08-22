@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupitemholder"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/country_code_text_color"
+        android:id="@+id/videopopupitemtext"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfasfgfdagasgasg"
+        android:fontFamily="@font/inter_bold"/>
+</RelativeLayout>

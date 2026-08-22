@@ -1,0 +1,21 @@
+{
+  "test_date": "2026-08-20 22:56 IST",
+  "api_key": "AIzaSyBgySXmTYlXyFrtZHaDsu7JRiQdFLVfEPk",
+  "status": "VALID - ACTIVE KEY",
+  "project_id": "828650946684",
+  "finding": "Key is REAL and authenticated with Google Cloud",
+  "geolocation_api_response": {
+    "error": {
+      "code": 403,
+      "message": "Geolocation API has not been used in project 828650946684 before or it is disabled",
+      "reason": "SERVICE_DISABLED"
+    }
+  },
+  "maps_api_response": {
+    "error_message": "This API is not activated on your API project",
+    "status": "REQUEST_DENIED"
+  },
+  "severity": "HIGH",
+  "impact": "Valid Google API key exposed in APK. While specific APIs are disabled, the key is authenticated and could be used if APIs are enabled or for quota exhaustion attacks.",
+  "proof": "Key successfully authenticated with Google Cloud Platform - Project 828650946684"
+}

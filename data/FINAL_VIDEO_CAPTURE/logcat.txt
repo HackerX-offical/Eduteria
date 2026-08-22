@@ -1,0 +1,100 @@
+08-21 22:14:31.323 11648 11725 D FacebookSDK.com.facebook.appevents.AppEventQueue: "_session_id": "16e1856e-68e7-4ab2-9960-7c91eb7071f2",
+08-21 22:14:31.323 11648 11725 D FacebookSDK.com.facebook.appevents.AppEventQueue: "user_info": "userId=54204924, userName=Security Researcher, userMobile=9279352074, userEmail=[REDACTED]",
+08-21 22:14:31.323 11648 11725 D FacebookSDK.com.facebook.appevents.AppEventQueue: "booktype": "paid",
+08-21 22:14:31.323 11648 11725 D FacebookSDK.com.facebook.appevents.AppEventQueue: "bookname": "Abhyas (72nd BPSC Prelims)"
+08-21 22:14:31.323 11648 11725 D FacebookSDK.com.facebook.appevents.AppEventQueue: }
+08-21 22:14:31.323 11648 11725 D FacebookSDK.com.facebook.appevents.AppEventQueue: ]
+08-21 22:14:31.748 1937 2631 D OplusFeatureHDREnhanceBrightness: checkIsPlayingHDR isPlayingHDR=0 rotation=0 whiteApp=false battery=79
+08-21 22:14:31.802 6206 6206 I adbd : adbd service requested 'shell,v2,TERM=xterm-256color,raw:killall tcpdump'
+08-21 22:14:31.922 4490 4727 D CommonScenarios-142-10330: transportLayerQosChange TransportLayerData{link_index=20, uid=10330, uplink_srtt=37, uplink_packets=8, uplink_retrans_packets=0, uplink_retrans_rate=0, downlink_srtt=54472, downlink_packets=8, downlink_retrans_packets=0, downlink_retrans_rate=0, downlink_rate=0, uplink_udp_packets=0, downlink_udp_packets=0, uplink_tcp_rate=2839, uplink_udp_rate=0, downlink_tcp_rate=6039, downlink_udp_rate=0}
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: ActiveState process message 2
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: ActiveState EVENT_NETWORK_KPI_CHANGE
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: scenarios 5 mdnsScore=0
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: totalScore:100
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: ActiveState EVENT_NETWORK_KPI_CHANGE score 100 scenariosscenarios 5
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: notifyScoreChange 100
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: needNotify lastScore=100 score=100
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: score diff < 5
+08-21 22:14:31.923 4490 4727 D CommonScenarios-142-10330: not need notify score change, return
+08-21 22:14:32.463 1296 1395 D vendor.oplus.hardware.charger-V3-service: read content:,407,401,4194,4194,-221,500,2200,79,79,1,4,-1,5062,79,1,0,1,1,0,0,4435,0,3,0,3,0,0,0,-2740,0,1,1,0,0,30,30,30,0,0,0,0,0,0,0,0,0,0
+08-21 22:14:32.463 1296 1395 D vendor.oplus.hardware.charger-V3-service: , ret_value:130
+08-21 22:14:32.463 1296 1395 D vendor.oplus.hardware.charger-V3-service: gmtime: 2026-08-21-22-14-32
+08-21 22:14:32.482 1937 4530 I OplusHansManager : uid=10312, pkg=com.jio.myjio F enter(), M stay=3
+08-21 22:14:32.490 1937 4530 I OplusHansManager : freeze uid: 10312 com.jio.myjio pids: [25195] scene: LcdOn
+08-21 22:14:32.491 7082 16560 D IHansComunication: HANS sendMessageToKernel: threadId = 515228286128, netLinkSetup = 1, type = PKG, targetUid = 10312, pkgCmd = ADD_ONE_UID
+08-21 22:14:32.722 1003 6926 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-21 22:14:32.737 4490 4727 D TrafficAlert: onReceive: actioncom.android.server.action.NETWORK_STATS_UPDATED
+08-21 22:14:32.738 1937 3704 V NetworkPolicy: updateNetworkEnabledNL() return
+08-21 22:14:32.738 1937 3704 V NetworkPolicy: updateNotificationsNL not process
+08-21 22:14:32.740 1937 3807 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 6303100209; tx bytes: 1298161210
+08-21 22:14:32.740 4490 4727 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-21 22:14:32.740 4490 4727 V TrafficAlert: getLimitNotification subId:1 ,numLimitNotificaion:0
+08-21 22:14:32.742 1937 3807 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-21 22:14:32.745 1937 3807 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-21 22:14:32.745 1937 3807 I OplusStatusBarManagerServiceEnhance: getTopIsFullscreen mTopIsFullscreen: false
+08-21 22:14:32.746 1937 1937 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-21 22:14:32.746 1937 1937 D NotificationService: This application enqueue notifications is not need postDelayed
+08-21 22:14:32.764 3926 3926 E tztt : updateNotificationListOnKg size:0
+08-21 22:14:32.946 4490 4727 D CommonScenarios-142-10330: transportLayerQosChange TransportLayerData{link_index=20, uid=10330, uplink_srtt=0, uplink_packets=0, uplink_retrans_packets=0, uplink_retrans_rate=0, downlink_srtt=54472, downlink_packets=0, downlink_retrans_packets=0, downlink_retrans_rate=0, downlink_rate=0, uplink_udp_packets=0, downlink_udp_packets=0, uplink_tcp_rate=0, uplink_udp_rate=0, downlink_tcp_rate=0, downlink_udp_rate=0}
+08-21 22:14:32.947 4490 4727 D CommonScenarios-142-10330: ActiveState process message 2
+08-21 22:14:32.947 4490 4727 D CommonScenarios-142-10330: ActiveState EVENT_NETWORK_KPI_CHANGE
+08-21 22:14:32.947 4490 4727 D CommonScenarios-142-10330: transport layer data is invalid
+08-21 22:14:32.947 4490 4727 D CommonScenarios-142-10330: ActiveState EVENT_NETWORK_KPI_CHANGE score is invalid
+08-21 22:14:32.955 3926 3926 I SystemUi--Keyguard: OplusLockScreenWallpaper-->loadBitmap drawable true, type: 0
+08-21 22:14:32.956 3926 3926 I SystemUi--Keyguard: PictorialFunctionContainer-->onWallpaperChange isSameWallpaperInfo return
+08-21 22:14:32.959 1937 4298 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-21 22:14:32.987 3926 3926 E tztt : updateNotificationListOnKg size:0
+08-21 22:14:33.015 3926 3926 E tztt : updateNotificationListOnKg size:0
+08-21 22:14:33.323 2289 2376 D QmiClient: qmiServiceEventCallback recv msg id 1085
+08-21 22:14:33.323 2289 2376 D QmiVsClient: enter - onQmiServiceEventCallback msgId 1085
+08-21 22:14:33.323 2289 2376 D QmiVsClientEvent: qmiVsClientNotifyNecEvent - RADIO_EVENT_NEC_IND
+08-21 22:14:33.324 2289 2323 D VsProxy : handleMessage msg is 2403
+08-21 22:14:33.324 2289 2323 D VsProxy : handleNecInd for instance 0
+08-21 22:14:33.325 4605 4630 D SubsysRadioIndication: radioNecInd 
+08-21 22:14:33.326 4605 4605 D RadioMessenger: handleMessage Request msgid 2220
+08-21 22:14:33.326 4605 4605 D RadioMessenger: handleSetSyncWithAp: -1, syncFlag: 1
+08-21 22:14:33.326 4605 4605 D QtiRadioService: setSyncWithAp
+08-21 22:14:33.327 4443 4443 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=243991022 mSleepTimeMs=147901348 mIdleTimeMs=45879176 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[520264, 13924, 1064, 36, 0],mRxTimeMs=49464671}]}
+08-21 22:14:33.327 4490 4730 D SubsysCallManager: handleMessage what:102
+08-21 22:14:33.327 4509 4700 I ModemAciService: handleMessage:5
+08-21 22:14:33.327 2289 2315 D RadioService: setSyncWithAp with instance 0
+08-21 22:14:33.327 4490 4730 D SubsysCallManager: parseMdmInfoData len:392
+08-21 22:14:33.327 2289 2315 D VendorService: VendorService::setSyncWithAp
+08-21 22:14:33.327 4490 4730 D SubsysCallManager: onMdmEvent moduleId:6,eventId:4
+08-21 22:14:33.327 4490 4730 D ModemDataAnalysis: phoneId = 0, moduleId = 6, onEvent...4, version = 0, size:380
+08-21 22:14:33.327 4490 4730 D ModemDataAnalysis: isCallNeedsEventId needs = false
+08-21 22:14:33.327 2289 2323 D QmiVsClient: setSyncWithAp - enter
+08-21 22:14:33.327 4509 4700 I ModemAciService: sendSettleObj2Statsd over!
+08-21 22:14:33.327 2289 2323 E QmiVsClient: sendAsyncRequest QMI_VS_SET_SYNC_WITH_AP_REQ_MSG_V01 ret 0
+08-21 22:14:33.328 2289 2323 D VsProxy : handleMessage msg is 4001
+08-21 22:14:33.328 2289 2323 D RadioProxy: setSyncWithAp : response cb for instance 0
+08-21 22:14:33.328 2289 2289 D RadioServiceResponse: RadioServiceResponse::setSyncWithApResponse
+08-21 22:14:33.329 4605 4630 D SubsysRadioResponse: setSyncWithApResponse info.error = 0
+08-21 22:14:33.330 4605 4630 D RadioProxyJ: [PHONE0][11689]< setSyncWithApResponse 
+08-21 22:14:33.330 4509 4700 I ModemAciService: UMF LO,DC: OplusModemActivityInfo{ date=08-21 22:14:33.327 modemPowermA[]=[373.13,274.52,471.73] sleepTimeMs=0 idleTimeMs=3672 rxTimeMs=11540 5gRxTimeMs=0 txTimeMs[]=[0, 0, 0, 0, 0] 5gTxTimeMsSIM1=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeMsSIM2=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeSum[]=[0, 0] techTimeMs[]=[0, 0, 0, 0, 0, 0, 0, 0, 0] rrcConn10sC[]=[0, 0] rrcConn20sC[]=[0, 0] rrcConnMore20sC[]=[0, 0] rrcConnC[]=[0, 0] csChangedC[]=[0, 0] psChangedC[]=[0, 0] iRatC[]=[0, 0] cellUpdateC[]=[0, 0] nwSrchC[]=[0, 0] nwSrchT[]=[0, 0] lteRrcConnT[]=[0, 0] psRegT[]=[15, 0] csRegT[]=[15, 0] psNoRegT[]=[0, 15] csNoRegT[]=[0, 15] sigGrid0T[]=[0, 0] endcActT[]=[0, 0] saActT[]=[15, 0] gpsTimeMs=0 wlanTimeMs=15212 regReqFbC[]=[0, 0] regReqTransAcqDbC[]=[0, 0] saRrcConn10sC[]=[0, 0] saRrcConn20sC[]=[0, 0] saRrcConnMore20sC[]=[0, 0] saRrcConnC[]=[0, 0] lteHoC[]=[0, 0] saHoC[]=[0, 0] saRrcConnT[]=[15, 0] sensorStationaryC=0 sensorStationaryT=0 modemStationaryC=0 modemStationaryT=0}
+08-21 22:14:33.330 4605 4605 D RadioMessenger: handleMessage Response msgid 210
+08-21 22:14:33.492 7082 16560 D IHansComunication: HANS sendMessageToKernel: threadId = 515228286128, netLinkSetup = 1, type = FROZEN_TRANS, targetUid = 10312, pkgCmd = PKG_CMD_MAX
+08-21 22:14:33.925 6206 6206 I adbd : adbd service requested 'sync:'
+08-21 22:14:33.970 4490 4727 D CommonScenarios-142-10330: transportLayerQosChange TransportLayerData{link_index=20, uid=10330, uplink_srtt=0, uplink_packets=0, uplink_retrans_packets=0, uplink_retrans_rate=0, downlink_srtt=54472, downlink_packets=0, downlink_retrans_packets=0, downlink_retrans_rate=0, downlink_rate=0, uplink_udp_packets=0, downlink_udp_packets=0, uplink_tcp_rate=0, uplink_udp_rate=0, downlink_tcp_rate=0, downlink_udp_rate=0}
+08-21 22:14:33.971 4490 4727 D CommonScenarios-142-10330: ActiveState process message 2
+08-21 22:14:33.971 4490 4727 D CommonScenarios-142-10330: ActiveState EVENT_NETWORK_KPI_CHANGE
+08-21 22:14:33.971 4490 4727 D CommonScenarios-142-10330: transport layer data is invalid
+08-21 22:14:33.971 4490 4727 D CommonScenarios-142-10330: ActiveState EVENT_NETWORK_KPI_CHANGE score is invalid
+08-21 22:14:33.979 6206 6206 I adbd : adbd service requested 'shell,v2,TERM=xterm-256color:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+08-21 22:14:34.061 4605 4605 D SubsysBroadcastManager: onReceive action:android.intent.action.BATTERY_CHANGED
+08-21 22:14:34.062 3926 3926 I SystemUi--Statusbar: BatteryControllerExt-->handleBroadcast() : broadcast = android.intent.action.BATTERY_CHANGED, charging = true, wirelessCharging = false, wirelessChargingReverse = false, pluggedIn = true, full = false, error = false, plugged = 2, status = 2, notifyCode = 0, wirelessReverseChgType = 0, level = 79
+08-21 22:14:34.062 3926 3926 I SystemUi--Statusbar: BatteryRepository-->model: BatteryStateModel:(level: 79, pluggedInWireless: false, charging: true, wirelessChargingReverse: false)
+08-21 22:14:34.062 3926 3926 W SystemUi--Keyguard: ChargingAnimationImpl-->BatteryStatus is same as last time , return
+08-21 22:14:34.063 29681 29681 D DeviceStatisticsService: onReceive: action= android.intent.action.BATTERY_CHANGED
+08-21 22:14:34.066 6582 6639 E Battery : ChargeProtectionUtils: mCanlendarTmp.isEmpty()!
+08-21 22:14:34.082 1296 1296 D vendor.oplus.hardware.charger-V3-service: getChargerControl:sub_current=100
+08-21 22:14:34.082 1296 1296 D vendor.oplus.hardware.charger-V3-service: sub_voltage=3800
+08-21 22:14:34.082 1296 1296 D vendor.oplus.hardware.charger-V3-service: sub_soc=-1
+08-21 22:14:34.082 1296 1296 D vendor.oplus.hardware.charger-V3-service: sub_temperature=250
+08-21 22:14:34.082 1296 1296 D vendor.oplus.hardware.charger-V3-service: main_soc=79
+08-21 22:14:34.126 11648 11648 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+08-21 22:14:34.126 11648 11648 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+08-21 22:14:34.126 11648 11648 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusDynamicVsyncFeature
+08-21 22:14:34.127 11648 11648 D OplusViewDebugManager: OplusViewDebugManager Constructor android.view.debug.OplusViewDebugManager@e2f518a [mHasViewDebugProperty true] [mHasMsgDebugProperty false] [DEBUG false] [EXTRAINFOENABLE false] [LIGHT_OS false]
+08-21 22:14:34.127 11648 11648 D OplusViewDebugManager: OplusViewDebugManager Constructor android.view.debug.OplusViewDebugManager@fb9f3fb [mHasViewDebugProperty true] [mHasMsgDebugProperty false] [DEBUG false] [EXTRAINFOENABLE false] [LIGHT_OS false]
+08-21 22:14:34.138 6206 6206 I adbd : adbd service requested 'shell,v2,TERM=xterm-256color:export ANDROID_LOG_TAGS=''; exec logcat '-d''

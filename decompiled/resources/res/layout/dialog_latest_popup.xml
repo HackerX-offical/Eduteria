@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_dialog_latest_popup"
+        android:background="@drawable/popup_banner_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp50"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/popUp_gif"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_latest_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:riv_corner_radius="10dp"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_close"
+            android:padding="@dimen/dp4"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp5"
+            android:src="0x7f0801f8"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

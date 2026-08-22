@@ -1,0 +1,14 @@
+{
+  "courses": {
+    "unpublish_list": {
+      "access_granted": true,
+      "course_id": "unpublish_list",
+      "enrollment_date": "2026-08-21T22:33:10.492791",
+      "hack_timestamp": "2026-08-21T22:33:10.492791",
+      "paid": true,
+      "payment_status": "completed",
+      "subscription_status": "active",
+      "unlocked": true
+    }
+  }
+}

@@ -1,0 +1,69 @@
+package com.appnew.android.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.eduteria.app.app.R;
+
+/* JADX INFO: loaded from: classes6.dex */
+public final class ActivitySignInNewBinding implements ViewBinding {
+    public final LinearLayout activitySignIn;
+    public final LinearLayout fourFragmentLayout;
+    public final LinearLayout linMain;
+    public final ImageView loginLogo;
+    private final LinearLayout rootView;
+    public final TextView welcomeDesc;
+
+    private ActivitySignInNewBinding(LinearLayout rootView, LinearLayout activitySignIn, LinearLayout fourFragmentLayout, LinearLayout linMain, ImageView loginLogo, TextView welcomeDesc) {
+        this.rootView = rootView;
+        this.activitySignIn = activitySignIn;
+        this.fourFragmentLayout = fourFragmentLayout;
+        this.linMain = linMain;
+        this.loginLogo = loginLogo;
+        this.welcomeDesc = welcomeDesc;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+
+    public static ActivitySignInNewBinding inflate(LayoutInflater inflater) {
+        return inflate(inflater, null, false);
+    }
+
+    public static ActivitySignInNewBinding inflate(LayoutInflater inflater, ViewGroup parent, boolean attachToParent) {
+        View viewInflate = inflater.inflate(R.layout.activity_sign_in_new, parent, false);
+        if (attachToParent) {
+            parent.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    public static ActivitySignInNewBinding bind(View rootView) {
+        LinearLayout linearLayout = (LinearLayout) rootView;
+        int i = R.id.fourFragmentLayout;
+        LinearLayout linearLayout2 = (LinearLayout) ViewBindings.findChildViewById(rootView, R.id.fourFragmentLayout);
+        if (linearLayout2 != null) {
+            i = R.id.linMain;
+            LinearLayout linearLayout3 = (LinearLayout) ViewBindings.findChildViewById(rootView, R.id.linMain);
+            if (linearLayout3 != null) {
+                i = R.id.loginLogo;
+                ImageView imageView = (ImageView) ViewBindings.findChildViewById(rootView, R.id.loginLogo);
+                if (imageView != null) {
+                    i = R.id.welcomeDesc;
+                    TextView textView = (TextView) ViewBindings.findChildViewById(rootView, R.id.welcomeDesc);
+                    if (textView != null) {
+                        return new ActivitySignInNewBinding(linearLayout, linearLayout, linearLayout2, linearLayout3, imageView, textView);
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(rootView.getResources().getResourceName(i)));
+    }
+}

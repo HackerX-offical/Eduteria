@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/appLogoIV"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp24"
+        android:layout_height="@dimen/dp24"
+        android:src="@mipmap/ic_launcher"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/notificationDetailsLLC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_toEndOf="@+id/appLogoIV">
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title of Notification"
+            android:maxLines="1"
+            style="@style/TextAppearance.Compat.Notification.Title"/>
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/msg"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Message of Notification"
+            android:maxLines="1"
+            style="@style/TextAppearance.Compat.Notification"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/notificationIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/placeholder_course"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/notificationDetailsLLC"
+        android:layout_marginEnd="@dimen/dp12"
+        android:layout_alignParentEnd="true"
+        android:outlineProvider="background"
+        app:shapeAppearanceOverlay="@style/roundedImageView"/>
+</RelativeLayout>

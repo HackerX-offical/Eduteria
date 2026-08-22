@@ -1,0 +1,30 @@
+package androidx.compose.foundation.lazy.staggeredgrid;
+
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import org.mozilla.classfile.ByteCode;
+
+/* JADX INFO: compiled from: LazyStaggeredGridDsl.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = ByteCode.ARETURN)
+public final class LazyStaggeredGridDslKt$items$4$1 implements Function1<Integer, StaggeredGridItemSpan> {
+    final /* synthetic */ List<T> $items;
+    final /* synthetic */ Function1<T, StaggeredGridItemSpan> $span;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public LazyStaggeredGridDslKt$items$4$1(Function1<? super T, StaggeredGridItemSpan> function1, List<? extends T> list) {
+        this.$span = function1;
+        this.$items = list;
+    }
+
+    /* JADX WARN: Type inference incomplete: some casts might be missing */
+    public final StaggeredGridItemSpan invoke(int i) {
+        return this.$span.invoke((T) this.$items.get(i));
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ StaggeredGridItemSpan invoke(Integer num) {
+        return invoke(num.intValue());
+    }
+}

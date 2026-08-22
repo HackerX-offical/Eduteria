@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:enabled="true"
+        android:textColor="@color/commonBtnTextColor"
+        android:id="@+id/bitrateButton"
+        android:background="@drawable/common_round_corners_button_drawable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/dp8"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/low_quality_240"
+        android:textAllCaps="false"
+        android:fontFamily="@font/inter_bold"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+</RelativeLayout>

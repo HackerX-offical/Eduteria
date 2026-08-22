@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:tag="layout-sw720dp/thank_you_dialog_0"
+    android:background="@drawable/round_corner_border_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dp18">
+    <ImageView
+        android:id="@+id/dialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/thank_you_icon"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="#4b4b4b"
+        android:gravity="center"
+        android:tag="binding_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp16"
+        android:layout_marginVertical="@dimen/dp16"/>
+</LinearLayout>

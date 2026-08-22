@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/backimag"
+            android:padding="@dimen/dp5"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@mipmap/back_gray"
+            android:scaleType="fitXY"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="@dimen/sp20"
+            android:textColor="@color/commonToolbarTextColor"
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/video_title"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_marginStart="@dimen/dp20"/>
+    </androidx.appcompat.widget.Toolbar>
+    <VideoView
+        android:id="@+id/video_play"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:layout_below="@+id/toolbar"/>
+</RelativeLayout>

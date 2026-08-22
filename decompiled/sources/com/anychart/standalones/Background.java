@@ -1,0 +1,870 @@
+package com.anychart.standalones;
+
+import com.amazonaws.services.s3.model.InstructionFileId;
+import com.anychart.APIlib;
+import com.anychart.JsObject;
+import com.anychart.chart.common.listener.ListenersInterface;
+import com.anychart.core.utils.Bounds;
+import com.anychart.enums.BackgroundCornersType;
+import com.anychart.graphics.vector.ColoredFill;
+import com.anychart.graphics.vector.Fill;
+import com.anychart.graphics.vector.GradientKey;
+import com.anychart.graphics.vector.Layer;
+import com.anychart.graphics.vector.PaperSize;
+import com.anychart.graphics.vector.Stage;
+import com.anychart.graphics.vector.Stroke;
+import com.anychart.graphics.vector.StrokeLineCap;
+import com.anychart.graphics.vector.StrokeLineJoin;
+import com.anychart.math.Rect;
+import com.anychart.utils.RectObj;
+import java.util.Arrays;
+import java.util.Locale;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class Background extends JsObject {
+    protected Background() {
+    }
+
+    public static Background instantiate() {
+        return new Background("new anychart.standalones.background()");
+    }
+
+    public Background(String str) {
+        StringBuilder sb = new StringBuilder("background");
+        int i = variableIndex + 1;
+        variableIndex = i;
+        this.jsBase = sb.append(i).toString();
+        APIlib.getInstance().addJSLine(this.jsBase + " = " + str + ";");
+    }
+
+    @Override // com.anychart.JsObject
+    public String getJsBase() {
+        return this.jsBase;
+    }
+
+    public void bottom() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".bottom();");
+    }
+
+    public Background bottom(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottom(%s);", number));
+        return this;
+    }
+
+    public Background bottom(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottom(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Bounds bounds() {
+        return new Bounds(this.jsBase + ".bounds()");
+    }
+
+    public Background bounds(RectObj rectObj) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s);", rectObj != null ? rectObj.getJsBase() : null));
+        return this;
+    }
+
+    public Background bounds(Rect rect) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s);", rect != null ? rect.getJsBase() : null));
+        return this;
+    }
+
+    public Background bounds(Bounds bounds) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s);", bounds != null ? bounds.getJsBase() : null));
+        return this;
+    }
+
+    public Background bounds(Number number, Number number2, Number number3, Number number4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, number2, number3, number4));
+        return this;
+    }
+
+    public Background bounds(Number number, Number number2, Number number3, String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, number2, number3, wrapQuotes(str)));
+        return this;
+    }
+
+    public Background bounds(Number number, Number number2, String str, Number number3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, number2, wrapQuotes(str), number3));
+        return this;
+    }
+
+    public Background bounds(Number number, Number number2, String str, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, number2, wrapQuotes(str), wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background bounds(Number number, String str, Number number2, Number number3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, wrapQuotes(str), number2, number3));
+        return this;
+    }
+
+    public Background bounds(Number number, String str, Number number2, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, wrapQuotes(str), number2, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background bounds(Number number, String str, String str2, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, wrapQuotes(str), wrapQuotes(str2), number2));
+        return this;
+    }
+
+    public Background bounds(Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background bounds(String str, Number number, Number number2, Number number3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), number, number2, number3));
+        return this;
+    }
+
+    public Background bounds(String str, Number number, Number number2, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), number, number2, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background bounds(String str, Number number, String str2, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), number2));
+        return this;
+    }
+
+    public Background bounds(String str, Number number, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background bounds(String str, String str2, Number number, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), number, number2));
+        return this;
+    }
+
+    public Background bounds(String str, String str2, Number number, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), number, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background bounds(String str, String str2, String str3, Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3), number));
+        return this;
+    }
+
+    public Background bounds(String str, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bounds(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Layer container() {
+        return new Layer(this.jsBase + ".container()");
+    }
+
+    public Background container(Layer layer) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".container(%s);", layer != null ? layer.getJsBase() : null));
+        return this;
+    }
+
+    public Background container(Stage stage) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".container(%s);", stage != null ? stage.getJsBase() : null));
+        return this;
+    }
+
+    public void cornerType() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".cornerType();");
+    }
+
+    public Background cornerType(BackgroundCornersType backgroundCornersType) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".cornerType(%s);", backgroundCornersType != null ? backgroundCornersType.getJsBase() : null));
+        return this;
+    }
+
+    public Background cornerType(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".cornerType(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void corners() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".corners();");
+    }
+
+    public Background corners(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s);", number));
+        return this;
+    }
+
+    public Background corners(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background corners(Number[] numberArr) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s);", Arrays.toString(numberArr)));
+        return this;
+    }
+
+    public Background corners(Number number, Number number2, Number number3, Number number4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, number2, number3, number4));
+        return this;
+    }
+
+    public Background corners(Number number, Number number2, Number number3, String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, number2, number3, wrapQuotes(str)));
+        return this;
+    }
+
+    public Background corners(Number number, Number number2, String str, Number number3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, number2, wrapQuotes(str), number3));
+        return this;
+    }
+
+    public Background corners(Number number, Number number2, String str, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, number2, wrapQuotes(str), wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background corners(Number number, String str, Number number2, Number number3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, wrapQuotes(str), number2, number3));
+        return this;
+    }
+
+    public Background corners(Number number, String str, Number number2, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, wrapQuotes(str), number2, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background corners(Number number, String str, String str2, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, wrapQuotes(str), wrapQuotes(str2), number2));
+        return this;
+    }
+
+    public Background corners(Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background corners(String str, Number number, Number number2, Number number3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), number, number2, number3));
+        return this;
+    }
+
+    public Background corners(String str, Number number, Number number2, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), number, number2, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background corners(String str, Number number, String str2, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), number2));
+        return this;
+    }
+
+    public Background corners(String str, Number number, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background corners(String str, String str2, Number number, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), number, number2));
+        return this;
+    }
+
+    public Background corners(String str, String str2, Number number, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), number, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background corners(String str, String str2, String str3, Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3), number));
+        return this;
+    }
+
+    public Background corners(String str, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".corners(%s, %s, %s, %s);", wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Background draw() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".draw();");
+        return this;
+    }
+
+    public void enabled() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".enabled();");
+    }
+
+    public Background enabled(Boolean bool) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".enabled(%s);", bool));
+        return this;
+    }
+
+    public void fill() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".fill();");
+    }
+
+    public Background fill(Fill fill) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s);", fill != null ? fill.getJsBase() : null));
+        return this;
+    }
+
+    public Background fill(GradientKey gradientKey) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s);", gradientKey != null ? gradientKey.getJsBase() : null));
+        return this;
+    }
+
+    public Background fill(String[] strArr) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s);", arrayToStringWrapQuotes(strArr)));
+        return this;
+    }
+
+    public Background fill(String str, Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s);", wrapQuotes(str), number));
+        return this;
+    }
+
+    public Background fill(GradientKey gradientKey, Number number, Boolean bool, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s);", gradientKey != null ? gradientKey.getJsBase() : null, number, bool, number2));
+        return this;
+    }
+
+    public Background fill(GradientKey gradientKey, Number number, com.anychart.graphics.vector.Rect rect, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s);", gradientKey != null ? gradientKey.getJsBase() : null, number, rect != null ? rect.getJsBase() : null, number2));
+        return this;
+    }
+
+    public Background fill(GradientKey gradientKey, Number number, String str, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s);", gradientKey != null ? gradientKey.getJsBase() : null, number, wrapQuotes(str), number2));
+        return this;
+    }
+
+    public Background fill(String[] strArr, Number number, Boolean bool, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s);", arrayToStringWrapQuotes(strArr), number, bool, number2));
+        return this;
+    }
+
+    public Background fill(String[] strArr, Number number, com.anychart.graphics.vector.Rect rect, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s);", arrayToStringWrapQuotes(strArr), number, rect != null ? rect.getJsBase() : null, number2));
+        return this;
+    }
+
+    public Background fill(String[] strArr, Number number, String str, Number number2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s);", arrayToStringWrapQuotes(strArr), number, wrapQuotes(str), number2));
+        return this;
+    }
+
+    public Background fill(GradientKey gradientKey, Number number, Number number2, com.anychart.graphics.math.Rect rect, Number number3, Number number4, Number number5) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s, %s, %s, %s);", gradientKey != null ? gradientKey.getJsBase() : null, number, number2, rect != null ? rect.getJsBase() : null, number3, number4, number5));
+        return this;
+    }
+
+    public Background fill(String[] strArr, Number number, Number number2, com.anychart.graphics.math.Rect rect, Number number3, Number number4, Number number5) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s, %s, %s, %s, %s, %s, %s);", arrayToStringWrapQuotes(strArr), number, number2, rect != null ? rect.getJsBase() : null, number3, number4, number5));
+        return this;
+    }
+
+    public Rect getPixelBounds() {
+        return new Rect(this.jsBase + ".getPixelBounds()");
+    }
+
+    public void height() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".height();");
+    }
+
+    public Background height(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".height(%s);", number));
+        return this;
+    }
+
+    public Background height(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".height(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void left() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".left();");
+    }
+
+    public Background left(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".left(%s);", number));
+        return this;
+    }
+
+    public Background left(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".left(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void maxHeight() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".maxHeight();");
+    }
+
+    public Background maxHeight(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".maxHeight(%s);", number));
+        return this;
+    }
+
+    public Background maxHeight(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".maxHeight(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void maxWidth() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".maxWidth();");
+    }
+
+    public Background maxWidth(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".maxWidth(%s);", number));
+        return this;
+    }
+
+    public Background maxWidth(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".maxWidth(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void minHeight() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".minHeight();");
+    }
+
+    public Background minHeight(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".minHeight(%s);", number));
+        return this;
+    }
+
+    public Background minHeight(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".minHeight(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void minWidth() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".minWidth();");
+    }
+
+    public Background minWidth(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".minWidth(%s);", number));
+        return this;
+    }
+
+    public Background minWidth(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".minWidth(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Rect parentBounds() {
+        return new Rect(this.jsBase + ".parentBounds()");
+    }
+
+    public Background parentBounds(Rect rect) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".parentBounds(%s);", rect != null ? rect.getJsBase() : null));
+        return this;
+    }
+
+    public Background parentBounds(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".parentBounds(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background parentBounds(Number number, Number number2, Number number3, Number number4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".parentBounds(%s, %s, %s, %s);", number, number2, number3, number4));
+        return this;
+    }
+
+    public void print(PaperSize paperSize, Boolean bool) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".print(%s, %s);", paperSize != null ? paperSize.getJsBase() : null, bool));
+    }
+
+    public void print(String str, Boolean bool) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".print(%s, %s);", wrapQuotes(str), bool));
+    }
+
+    public void removeAllListeners(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".removeAllListeners(%s);", wrapQuotes(str)));
+    }
+
+    public void right() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".right();");
+    }
+
+    public Background right(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".right(%s);", number));
+        return this;
+    }
+
+    public Background right(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".right(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void stroke() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".stroke();");
+    }
+
+    public Background stroke(Stroke stroke) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s);", stroke != null ? stroke.getJsBase() : null));
+        return this;
+    }
+
+    public Background stroke(ColoredFill coloredFill) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s);", coloredFill != null ? coloredFill.getJsBase() : null));
+        return this;
+    }
+
+    public Background stroke(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background stroke(Stroke stroke, Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background stroke(Stroke stroke, Number number, String str, String str2, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background stroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background stroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background stroke(String str, Number number, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Background stroke(String str, Number number, String str2, String str3, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background stroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background stroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".stroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public void top() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".top();");
+    }
+
+    public Background top(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".top(%s);", number));
+        return this;
+    }
+
+    public Background top(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".top(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void setOnClickListener(ListenersInterface.OnClickListener onClickListener) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.jsBase).append(".listen('pointClick', function(e) {");
+        if (onClickListener.getFields() != null) {
+            sb.append("var result = ");
+            for (String str : onClickListener.getFields()) {
+                sb.append(String.format(Locale.US, "'%1$s' + ':' + e.point.get('%1$s') + ',' +", str));
+            }
+            sb.setLength(sb.length() - 8);
+            sb.append(";");
+            sb.append("android.onClick(result);");
+        } else {
+            sb.append("android.onClick(null);");
+        }
+        sb.append("});");
+        ListenersInterface.getInstance().setOnClickListener(onClickListener);
+        APIlib.getInstance().addJSLine(sb.toString());
+    }
+
+    public void setOnClickListener(ListenersInterface.OnClickListener onClickListener, String str, String str2) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.jsBase).append(String.format(Locale.US, ".listen('%1$s', function(e) {", str));
+        if (onClickListener.getFields() != null) {
+            String str3 = str2 != null ? str2 + InstructionFileId.DOT : "";
+            sb.append("var result = ");
+            for (String str4 : onClickListener.getFields()) {
+                sb.append(String.format(Locale.US, "'%1$s' + ':' + e.%2$s%1$s + ',' +", str4, str3));
+            }
+            sb.setLength(sb.length() - 8);
+            sb.append(";");
+            sb.append("android.onClick(result);");
+        } else {
+            sb.append("android.onClick(null);");
+        }
+        sb.append("});");
+        ListenersInterface.getInstance().setOnClickListener(onClickListener);
+        APIlib.getInstance().addJSLine(sb.toString());
+    }
+
+    public void unlistenByKey(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".unlistenByKey(%s);", wrapQuotes(str)));
+    }
+
+    public void width() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".width();");
+    }
+
+    public Background width(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".width(%s);", number));
+        return this;
+    }
+
+    public Background width(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".width(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public void zIndex() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".zIndex();");
+    }
+
+    public Background zIndex(Number number) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".zIndex(%s);", number));
+        return this;
+    }
+
+    public void bottomStroke() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".bottomStroke();");
+    }
+
+    public Background bottomStroke(Stroke stroke) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s);", stroke != null ? stroke.getJsBase() : null));
+        return this;
+    }
+
+    public Background bottomStroke(ColoredFill coloredFill) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s);", coloredFill != null ? coloredFill.getJsBase() : null));
+        return this;
+    }
+
+    public Background bottomStroke(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background bottomStroke(Stroke stroke, Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background bottomStroke(Stroke stroke, Number number, String str, String str2, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background bottomStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background bottomStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background bottomStroke(String str, Number number, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Background bottomStroke(String str, Number number, String str2, String str3, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background bottomStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background bottomStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".bottomStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public void leftStroke() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".leftStroke();");
+    }
+
+    public Background leftStroke(Stroke stroke) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s);", stroke != null ? stroke.getJsBase() : null));
+        return this;
+    }
+
+    public Background leftStroke(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background leftStroke(Stroke stroke, Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background leftStroke(Stroke stroke, Number number, String str, String str2, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background leftStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background leftStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background leftStroke(String str, Number number, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Background leftStroke(String str, Number number, String str2, String str3, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background leftStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background leftStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".leftStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public void rightStroke() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".rightStroke();");
+    }
+
+    public Background rightStroke(Stroke stroke) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s);", stroke != null ? stroke.getJsBase() : null));
+        return this;
+    }
+
+    public Background rightStroke(ColoredFill coloredFill) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s);", coloredFill != null ? coloredFill.getJsBase() : null));
+        return this;
+    }
+
+    public Background rightStroke(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background rightStroke(Stroke stroke, Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background rightStroke(Stroke stroke, Number number, String str, String str2, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background rightStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background rightStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background rightStroke(String str, Number number, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Background rightStroke(String str, Number number, String str2, String str3, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background rightStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background rightStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".rightStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public void topStroke() {
+        APIlib.getInstance().addJSLine(this.jsBase + ".topStroke();");
+    }
+
+    public Background topStroke(Stroke stroke) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s);", stroke != null ? stroke.getJsBase() : null));
+        return this;
+    }
+
+    public Background topStroke(ColoredFill coloredFill) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s);", coloredFill != null ? coloredFill.getJsBase() : null));
+        return this;
+    }
+
+    public Background topStroke(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s);", wrapQuotes(str)));
+        return this;
+    }
+
+    public Background topStroke(Stroke stroke, Number number, String str, String str2, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background topStroke(Stroke stroke, Number number, String str, String str2, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), wrapQuotes(str2), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background topStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, String str2) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str2)));
+        return this;
+    }
+
+    public Background topStroke(Stroke stroke, Number number, String str, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", stroke != null ? stroke.getJsBase() : null, number, wrapQuotes(str), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background topStroke(String str, Number number, String str2, String str3, String str4) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), wrapQuotes(str4)));
+        return this;
+    }
+
+    public Background topStroke(String str, Number number, String str2, String str3, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), wrapQuotes(str3), strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background topStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, String str3) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, wrapQuotes(str3)));
+        return this;
+    }
+
+    public Background topStroke(String str, Number number, String str2, StrokeLineJoin strokeLineJoin, StrokeLineCap strokeLineCap) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".topStroke(%s, %s, %s, %s, %s);", wrapQuotes(str), number, wrapQuotes(str2), strokeLineJoin != null ? strokeLineJoin.getJsBase() : null, strokeLineCap != null ? strokeLineCap.getJsBase() : null));
+        return this;
+    }
+
+    public Background fill(String str) {
+        APIlib.getInstance().addJSLine(String.format(Locale.US, this.jsBase + ".fill(%s);", wrapQuotes(str)));
+        return this;
+    }
+}

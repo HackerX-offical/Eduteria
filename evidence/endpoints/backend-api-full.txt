@@ -1,0 +1,57 @@
+EDUTERIA BACKEND API ENDPOINTS
+==============================
+
+MAIN API BASE: https://appapi.videocrypt.in/index.php/data_model/
+
+COURSE ENDPOINTS:
+- /course/get_master_data
+- /course/get_courses 
+- /course/get_course_filters
+- /course/post_course_review
+- /course/user_video_view_data
+- /course/update_video_view_time
+- /course_deprecated/get_course_detail
+
+PAYMENT ENDPOINTS:
+- /payment/free_transaction
+
+TEST/EXAM ENDPOINTS:
+- /test/get_instructions
+- /test/get_test_data
+
+USER ENDPOINTS:
+- /users/logout
+
+NOTIFICATION ENDPOINTS:
+- /notification/get_notifications
+- /notification/mark_as_read
+- /notification/set_all_read
+
+CONTENT DELIVERY:
+- /meta_distributer/on_request_meta_source
+- /master_hit/content
+
+HELP DESK:
+- /help_desk/get_my_queries
+
+REVISION:
+- /revision/delete_revision
+
+FIREBASE PATHS:
+- 166/chat_master/{chat_node}/1TOM/
+- 166/chat_master/{chat_node}/1TO1/{userId}
+- 166/chat_master/{chat_node}/Poll/{pollId}
+- 166/chat_master/{chat_node}/User/{userId}
+- 166/chat_master/{chat_node}/completevideo/
+
+VIDEO CDN:
+- https://cdn.jwplayer.com/v2/media/{video_id}
+- YouTube: http://www.youtube.com/watch?v={video_id}
+
+WHATSAPP INTEGRATION:
+- https://wa.me/{phone_number}
+- https://api.whatsapp.com/send?phone={phone}
+
+EXTERNAL:
+- https://courses.utkarsh.com/offlineadmission/home.php
+- https://www.youtube.com/playlist?list=PLoZP2WsNfBSFGsub-jJb_uNW58zQRpDXc

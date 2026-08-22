@@ -1,0 +1,84 @@
+package com.appnew.android.Response;
+
+import com.clevertap.android.sdk.Constants;
+import java.io.Serializable;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class NotificationSettingsResponse implements Serializable {
+    private String allow_tagging;
+    private String comment_on_post_notification;
+    private String follow_notification;
+    private String id;
+    private String other_notification;
+    private String post_like_notification;
+    private String tag_notification;
+    private String user_id;
+
+    public String getAllow_tagging() {
+        return this.allow_tagging;
+    }
+
+    public void setAllow_tagging(String allow_tagging) {
+        this.allow_tagging = allow_tagging;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFollow_notification() {
+        return this.follow_notification;
+    }
+
+    public void setFollow_notification(String follow_notification) {
+        this.follow_notification = follow_notification;
+    }
+
+    public String getComment_on_post_notification() {
+        return this.comment_on_post_notification;
+    }
+
+    public void setComment_on_post_notification(String comment_on_post_notification) {
+        this.comment_on_post_notification = comment_on_post_notification;
+    }
+
+    public String getUser_id() {
+        return this.user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getTag_notification() {
+        return this.tag_notification;
+    }
+
+    public void setTag_notification(String tag_notification) {
+        this.tag_notification = tag_notification;
+    }
+
+    public String getOther_notification() {
+        return this.other_notification;
+    }
+
+    public void setOther_notification(String other_notification) {
+        this.other_notification = other_notification;
+    }
+
+    public String getPost_like_notification() {
+        return this.post_like_notification;
+    }
+
+    public void setPost_like_notification(String post_like_notification) {
+        this.post_like_notification = post_like_notification;
+    }
+
+    public String toString() {
+        return "ClassPojo [id = " + this.id + ", follow_notification = " + this.follow_notification + ", comment_on_post_notification = " + this.comment_on_post_notification + ", user_id = " + this.user_id + ", tag_notification = " + this.tag_notification + ", other_notification = " + this.other_notification + ", post_like_notification = " + this.post_like_notification + Constants.AES_SUFFIX;
+    }
+}

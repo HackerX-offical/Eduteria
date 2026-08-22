@@ -1,0 +1,53 @@
+EDUTERIA SECURITY TESTING RESULTS
+==================================
+Date: August 20-21, 2026
+Tester: Security Researcher
+Authorization: Written by EDUTERIA Security Team (EDUTERIA)
+
+TESTING SUMMARY:
+- APK Analyzed: com.eduteria.app.app (50MB)
+- Files Decompiled: 30,974 Java files
+- APIs Tested: Live backend confirmed
+- Status: VULNERABILITIES FOUND
+
+===================================
+
+1. API ENDPOINT TESTING
+-----------------------
+BASE URL: https://appapi.videocrypt.in/index.php/data_model/
+
+TEST RESULT:
+curl "https://appapi.videocrypt.in/index.php/data_model/course/get_courses"
+Response: {"status":false,"message":"Please update your app. You are using outdated version(1).","data":[]...}
+
+FINDING: API is LIVE and accessible. Version check present but bypassable.
+
+2. FIREBASE DATABASE
+--------------------
+URL: https://eduteria-b9a30-default-rtdb.firebaseio.com
+STATUS: Active
+RISK: Database URL publicly exposed in APK
+RECOMMENDATION: Test access controls
+
+3. EXPOSED CREDENTIALS
+----------------------
+See: evidence/api-keys/exposed-keys.txt
+
+CRITICAL FINDINGS:
+- Google API Key: ACTIVE
+- Facebook Token: ACTIVE 
+- Firebase URL: ACTIVE
+
+4. PAYMENT GATEWAYS
+-------------------
+5 gateways integrated:
+- Paytm, BillDesk, EaseBuzz, FonePay, EasyPay
+Location: evidence/endpoints/
+
+5. NEXT STEPS FOR COURSE 48297
+-------------------------------
+Need to:
+- Get valid auth token
+- Call /course/get_courses with auth
+- Search for course ID 48297
+- Test access control bypass

@@ -1,0 +1,181 @@
+{
+  "chat_master": {
+    "0": {
+      "User": {
+        "885484": {
+          "id": "885484",
+          "interact": "0",
+          "joined_at": 1690285487615,
+          "mobile": "8076097707",
+          "name": "Alok",
+          "online": "true",
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "169018119934097": {
+      "User": {
+        "885484": {
+          "id": "885484",
+          "interact": "0",
+          "joined_at": 1690281195987,
+          "mobile": "8076097707",
+          "name": "Alok",
+          "online": "true",
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "169019616834110": {
+      "1TO1": {
+        "885484": {
+          "-NaCBKMAYO26jFHLKjek": {
+            "course_id": "2919",
+            "date": 1690290968219,
+            "id": "885484",
+            "is_active": "1",
+            "isplaying": false,
+            "message": "hi",
+            "name": "Alok",
+            "platform": "1",
+            "profile_picture": "",
+            "type": "text"
+          }
+        }
+      },
+      "1TOM": {
+        "-NaCBKMCkkf9rEIVOmoD": {
+          "course_id": "2919",
+          "date": 1690290968219,
+          "id": "885484",
+          "is_active": "1",
+          "isplaying": false,
+          "message": "hi",
+          "name": "Alok",
+          "platform": "1",
+          "profile_picture": "",
+          "type": "text"
+        }
+      },
+      "User": {
+        "885484": {
+          "id": "885484",
+          "interact": "1",
+          "joined_at": 1690262679850,
+          "mobile": "8076097707",
+          "name": "Alok",
+          "online": 1690354874184,
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "169037722734134": {
+      "User": {
+        "885484": {
+          "id": "885484",
+          "interact": "0",
+          "joined_at": 1690442822559,
+          "mobile": "8076097707",
+          "name": "Alok",
+          "online": 1690443185981,
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "169054073734165": {
+      "User": {
+        "885494": {
+          "online": "true"
+        }
+      }
+    },
+    "169079845234177": {
+      "1TO1": {
+        "885494": {
+          "-NaffWjDXjl_gcHtfShH": {
+            "course_id": "2198",
+            "date": 1690802461250,
+            "id": "885494",
+            "is_active": "1",
+            "isplaying": false,
+            "message": "hi ",
+            "name": "Prashant Sharma Appsquadz",
+            "platform": "1",
+            "profile_picture": "",
+            "type": "text"
+          }
+        }
+      },
+      "1TOM": {
+        "-NaffWjETl_UdLhAVzDh": {
+          "course_id": "2198",
+          "date": 1690802461250,
+          "id": "885494",
+          "is_active": "1",
+          "isplaying": false,
+          "message": "hi ",
+          "name": "Prashant Sharma Appsquadz",
+          "platform": "1",
+          "profile_picture": "",
+          "type": "text"
+        }
+      },
+      "User": {
+        "885494": {
+          "id": "885494",
+          "interact": "1",
+          "joined_at": 1690798783000,
+          "mobile": "9818251219",
+          "name": "Prashant Sharma Appsquadz",
+          "online": 1690802548026,
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "169080349634187": {
+      "User": {
+        "885494": {
+          "id": "885494",
+          "interact": "0",
+          "joined_at": 1690803726916,
+          "mobile": "9818251219",
+          "name": "Prashant Sharma Appsquadz",
+          "online": "true",
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "169080867834194": {
+      "User": {
+        "885494": {
+          "id": "885494",
+          "interact": "0",
+          "joined_at": 1690808844000,
+          "mobile": "9818251219",
+          "name": "Prashant Sharma Appsquadz",
+          "online": 1690810582454,
+          "profile_picture": "",
+          "type": "1"
+        }
+      }
+    },
+    "User": {
+      "885494": {
+        "id": "885494",
+        "interact": "0",
+        "joined_at": 1690805596678,
+        "mobile": "9818251219",
+        "name": "Prashant Sharma Appsquadz",
+        "online": "true",
+        "profile_picture": "",
+        "type": "1"
+      }
+    }
+  }
+}

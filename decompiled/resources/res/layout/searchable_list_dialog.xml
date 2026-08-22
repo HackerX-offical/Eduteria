@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Select Bank"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <androidx.appcompat.widget.SearchView
+        android:gravity="center"
+        android:id="@+id/search"
+        android:background="@drawable/custom_background_white"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:queryBackground="@null"
+        app:queryHint="Search"
+        app:searchIcon="0x7f0805f1"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/pwe_note_color"
+        android:gravity="center"
+        android:id="@+id/txt_no_results_found"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="No results found."/>
+    <ListView
+        android:id="@+id/listItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/pwe_divider_color"
+        android:dividerHeight="1dp"/>
+</LinearLayout>

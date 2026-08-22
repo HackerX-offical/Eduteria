@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/item_power_menu_layout"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/item_power_menu_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="7dp"
+        android:scaleType="fitXY"
+        android:layout_marginStart="7dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/item_power_menu_title"
+        android:padding="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6sp"
+        app:fontFamily="sans-serif"/>
+</LinearLayout>

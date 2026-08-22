@@ -1,0 +1,71 @@
+package androidx.compose.ui.unit;
+
+import com.clevertap.android.sdk.Constants;
+import com.facebook.appevents.iap.InAppPurchaseConstants;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: Density.kt */
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\b\n\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0082\b\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\t\u0010\n\u001a\u00020\u0003HÆ\u0003J\t\u0010\u000b\u001a\u00020\u0003HÆ\u0003J\u001d\u0010\f\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u0003HÆ\u0001J\u0014\u0010\r\u001a\u00020\u000e2\b\u0010\u000f\u001a\u0004\u0018\u00010\u0010HÖ\u0083\u0004J\n\u0010\u0011\u001a\u00020\u0012HÖ\u0081\u0004J\n\u0010\u0013\u001a\u00020\u0014HÖ\u0081\u0004R\u0014\u0010\u0002\u001a\u00020\u0003X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0014\u0010\u0004\u001a\u00020\u0003X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\b¨\u0006\u0015"}, d2 = {"Landroidx/compose/ui/unit/DensityImpl;", "Landroidx/compose/ui/unit/Density;", "density", "", "fontScale", "<init>", "(FF)V", "getDensity", "()F", "getFontScale", "component1", "component2", Constants.COPY_TYPE, "equals", "", "other", "", "hashCode", "", InAppPurchaseConstants.METHOD_TO_STRING, "", "ui-unit"}, k = 1, mv = {2, 1, 0}, xi = 48)
+final /* data */ class DensityImpl implements Density {
+    private final float density;
+    private final float fontScale;
+
+    public static /* synthetic */ DensityImpl copy$default(DensityImpl densityImpl, float f2, float f3, int i, Object obj) {
+        if ((i & 1) != 0) {
+            f2 = densityImpl.density;
+        }
+        if ((i & 2) != 0) {
+            f3 = densityImpl.fontScale;
+        }
+        return densityImpl.copy(f2, f3);
+    }
+
+    /* JADX INFO: renamed from: component1, reason: from getter */
+    public final float getDensity() {
+        return this.density;
+    }
+
+    /* JADX INFO: renamed from: component2, reason: from getter */
+    public final float getFontScale() {
+        return this.fontScale;
+    }
+
+    public final DensityImpl copy(float density, float fontScale) {
+        return new DensityImpl(density, fontScale);
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof DensityImpl)) {
+            return false;
+        }
+        DensityImpl densityImpl = (DensityImpl) other;
+        return Float.compare(this.density, densityImpl.density) == 0 && Float.compare(this.fontScale, densityImpl.fontScale) == 0;
+    }
+
+    public int hashCode() {
+        return (Float.hashCode(this.density) * 31) + Float.hashCode(this.fontScale);
+    }
+
+    public String toString() {
+        return "DensityImpl(density=" + this.density + ", fontScale=" + this.fontScale + ')';
+    }
+
+    public DensityImpl(float f2, float f3) {
+        this.density = f2;
+        this.fontScale = f3;
+    }
+
+    @Override // androidx.compose.ui.unit.Density
+    public float getDensity() {
+        return this.density;
+    }
+
+    @Override // androidx.compose.ui.unit.FontScaling
+    public float getFontScale() {
+        return this.fontScale;
+    }
+}

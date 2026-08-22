@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/subTileItemCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp12">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/parentRL1"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+        <ImageView
+            android:id="@+id/tabIV1"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@+id/tabTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:text="Titles"
+            android:maxLines="2"
+            android:minLines="2"
+            android:layout_below="@+id/tabIV1"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/inter_regular"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

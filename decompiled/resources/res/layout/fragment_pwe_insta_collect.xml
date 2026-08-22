@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/linear_upi_apps_root"
+    android:background="@drawable/pwe_custom_card_gray_background"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="2dp">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/pwe_title_color"
+        android:id="@+id/text_insta_collect_label"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text=""/>
+    <TextView
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/pwe_title_color"
+        android:id="@+id/text_insta_collect_steps"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="Steps to make payment"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/pwe_title_color"
+        android:id="@+id/text_insta_collect_text"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:text=""/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/pwe_error_color"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/text_insta_collect_error"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+    <include layout="@layout/pwe_pay_button_layout"/>
+</LinearLayout>

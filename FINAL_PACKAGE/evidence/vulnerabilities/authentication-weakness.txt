@@ -1,0 +1,36 @@
+AUTHENTICATION & SESSION MANAGEMENT
+===================================
+
+USER ID STORAGE:
+File: MakeMyExam.java (lines 64, 95-101)
+ public static String userId = "0";
+ public static String username = "";
+
+VULNERABILITY: Static variables for user authentication
+- userId stored in static variable (global state)
+- Accessible from any part of app
+- Persists in memory
+- No encryption visible
+
+SESSION MANAGEMENT:
+- SharedPreferences used for persistence
+- PreferencesUtil.java handles storage
+- No visible token expiration
+- No session invalidation on logout
+
+SECURITY FEATURES FOUND:
+- Screen recording detection (SecurityUtils)
+- Detects streaming/recording attempts
+- Restarts app if detected
+
+WEAKNESS:
+- Static user data is vulnerable
+- No visible encryption of stored credentials
+- Session tokens may persist
+- Replay attack possible
+
+FILES:
+- MakeMyExam.java (main app class)
+- PreferencesUtil.java (storage)
+- SharedPreference.java (helpers)
+- SecurityUtils.java (security checks)

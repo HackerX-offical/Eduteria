@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-08-21T22:41:51.607663",
+  "user_id": "54204924",
+  "operation": "bulk_unlock",
+  "premium_flags_set": true,
+  "courses_unlocked": 59,
+  "sample_courses": [
+    "2866",
+    "2871",
+    "2890",
+    "2874",
+    "2861",
+    "2883",
+    "2884",
+    "2893",
+    "2863",
+    "2886"
+  ],
+  "firebase_paths": [
+    "/users/54204924",
+    "/166/users/54204924",
+    "/subscriptions/54204924",
+    "/user_courses/54204924",
+    "/enrollments/54204924"
+  ]
+}

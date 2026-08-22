@@ -1,0 +1,43 @@
+CONTENT ACCESS CONTROL ANALYSIS
+================================
+
+FINDING: Content locking uses simple string parameter
+
+MECHANISM:
+- Videos have "islocked" parameter: "0" (unlocked), "1" (locked), "2" (unknown)
+- Passed as Intent extras between activities
+- Checked in player activities (YoutubePlayerActivity, VODPlayerActivity, Liveawsactivity)
+
+VULNERABLE CODE PATTERN:
+File: YoutubePlayerActivity.java
+Lines: 2213, 2219, 2253, 2259
+ if (this.islocked.equalsIgnoreCase("1")) {
+ // Show locked UI
+ } else if (this.islocked.equalsIgnoreCase("0")) {
+ // Allow playback
+ }
+
+VULNERABILITY:
+- Lock check appears CLIENT-SIDE
+- Intent data can be manipulated
+- No server-side verification visible in player code
+
+SUBSCRIPTION MODEL:
+- subscription_all_data (JSON object)
+- Stored locally after purchase
+- Retrieved from CourseDetailTable database
+
+FILES:
+- PurchaseActivity.java (payment handling)
+- ShowAllClassesFragment.java (subscription check)
+- DirectLayer3.java (course access)
+
+EXPLOITATION POTENTIAL: HIGH
+- Client-side checks bypassable
+- Intent manipulation possible
+- Need to verify server-side validation
+
+RECOMMENDATION:
+- Move verification to server
+- Validate on each content request
+- Use signed tokens

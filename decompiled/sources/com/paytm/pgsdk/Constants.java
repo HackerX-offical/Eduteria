@@ -1,0 +1,56 @@
+package com.paytm.pgsdk;
+
+/* JADX INFO: loaded from: classes9.dex */
+public class Constants {
+    public static final String CALLBACK_URL = "CALLBACK_URL";
+    public static final String CHANNEL_ID = "CHANNEL_ID";
+    public static final String CHECKSUMHASH = "CHECKSUMHASH";
+    public static final String CUST_ID = "CUST_ID";
+    public static final String ERROR_TXN_FAILED_NULL = "Transaction failed because of values becoming null";
+    public static final String EVENT_ACTION_APP_INVOKE_BRIDGE = "app-invoke-bridge";
+    public static final String EVENT_ACTION_ERROR = "Error";
+    public static final String EVENT_ACTION_PAYTMH5_LOAD = "Paytm_H5_Load";
+    public static final String EVENT_ACTION_PAYTM_APP_EXIST = "Paytm_App_exists";
+    public static final String EVENT_ACTION_PAYTM_APP_INVOKE = "Paytm_App_invoke";
+    public static final String EVENT_ACTION_RESPONSE_BACK = "Response_Back";
+    public static final String EVENT_ACTION_SDK_INITIALIZED = "SDK_initialized";
+    public static final String EVENT_ACTION_WEB_VIEW_BRIDGE = "webview-bridge";
+    public static final String EVENT_LABEL_BRIDGE = "bridgeName";
+    public static final String EVENT_LABEL_FAIL = "fail";
+    public static final String EVENT_LABEL_FALSE = "false";
+    public static final String EVENT_LABEL_KEY_ERROR_DESCRIPTION = "errorDescription";
+    public static final String EVENT_LABEL_KEY_EXIST = "exist";
+    public static final String EVENT_LABEL_KEY_MID = "mid";
+    public static final String EVENT_LABEL_KEY_ORDER_ID = "orderId";
+    public static final String EVENT_LABEL_KEY_STATUS = "status";
+    public static final String EVENT_LABEL_SUCCESS = "success";
+    public static final String EVENT_LABEL_TRUE = "true";
+    public static final String EVENT_TYPE_ALL_IN_ONE = "AIO_SDK_PG";
+    public static final String FEATURE_AVAILABLE_IN_APP = "feature_available_in_app";
+    public static final String FLOW_TYPE_APP_INVOKE = "AppInvoke";
+    public static final String FLOW_TYPE_REDIRECTION = "Redirection";
+    public static final String INDUSTRY_TYPE_ID = "INDUSTRY_TYPE_ID";
+    public static final String IS_ENABLE_ASSIST = "IS_ENABLE_ASSIST";
+    public static final String KEY_API_BODY = "body";
+    public static final String KEY_API_HEAD = "head";
+    public static final String KEY_API_MID = "mid";
+    public static final String KEY_API_ORDER_ID = "orderId";
+    public static final String KEY_API_REQ_TIME_STAMP = "requestTimestamp";
+    public static final String KEY_API_TOKEN = "token";
+    public static final String KEY_API_TXN_TYPE = "tokenType";
+    public static final String KEY_API_VERSION = "version";
+    public static final String KEY_CLOSE_ORDER_URL = "/theia/api/v2/closeOrder";
+    public static final String KEY_TRANS_STATUS_URL = "/theia/v1/transactionStatus";
+    public static final String KEY_USER_MOBILE_HASH = "USER_MOBILE_HASH";
+    public static final String KEY_USER_MOBILE_HASH_2 = "USER_MOBILE_HASH_2";
+    public static final String MID = "MID";
+    public static final String ORDER_ID = "ORDER_ID";
+    public static String RESPONSE = "response";
+    public static final String TXN_AMOUNT = "TXN_AMOUNT";
+    public static final String TXN_TOKEN = "TXN_TOKEN";
+    public static final String USER_LOGGED_IN = "user_logged_in";
+    public static final String USER_LOGIN_STATUS_RESULT_ACTION = "user_login_status_action";
+    public static final String USER_MATCHES = "user_matches";
+    public static final String USER_MATCH_RESULT_ACTION = "user_match_result_action";
+    public static final String WEBSITE = "WEBSITE";
+}

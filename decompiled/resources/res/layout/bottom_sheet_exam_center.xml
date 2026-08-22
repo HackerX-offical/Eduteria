@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background_rectangle_radius"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp20"
+    android:layout_marginEnd="@dimen/dp20">
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/header_rl"
+        android:background="@drawable/background_rectangle_radius_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30">
+        <TextView
+            android:textSize="@dimen/dimen_18sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose City Center"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/scrollable_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_below="@+id/header_rl">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginEnd="@dimen/dp10"/>
+    </RelativeLayout>
+</RelativeLayout>

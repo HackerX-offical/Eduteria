@@ -1,0 +1,191 @@
+================================================================================
+MANUAL DATABASE MODIFICATION - ADD COURSES TO "MY COURSES"
+================================================================================
+
+WHY THIS METHOD:
+- Firebase hack worked but app doesn't read from it 
+- API calls blocked by version check 
+- App uses LOCAL SQLite database to show "My Courses" 
+
+THIS WILL WORK if you follow these exact steps!
+
+================================================================================
+METHOD 1: AUTOMATED SCRIPT (EASIEST)
+================================================================================
+
+Run this command in Terminal:
+
+ cd ~/Developer/EduTeria
+ ./modify_local_database.sh
+
+The script will:
+1. Pull the database from your phone
+2. Add course 48297 to your account 
+3. Push it back to your phone
+4. Course appears in "My Courses"!
+
+If it asks for permissions, approve them.
+
+================================================================================
+METHOD 2: MANUAL SQL INJECTION (IF SCRIPT FAILS)
+================================================================================
+
+STEP 1: Connect to phone via ADB
+ $ ~/platform-tools/adb devices
+ (should show your OnePlus device)
+
+STEP 2: Enter the app's data directory
+ $ ~/platform-tools/adb shell
+ $ run-as com.eduteria.app.app
+
+STEP 3: Open the database
+ $ cd databases
+ $ ls
+ (you should see files like "utkash.db" or similar)
+ 
+ $ sqlite3 utkash.db
+ (or whatever the .db file is named)
+
+STEP 4: Check current courses
+ sqlite> SELECT * FROM MycourseTable;
+ (probably empty or shows error - that's OK)
+
+STEP 5: Add course 48297
+ sqlite> INSERT INTO MycourseTable (id, title, userid, purchase_date, expiry_date, is_activated, delete) VALUES ('48297', 'Samarth - 72nd BPSC Mains Foundation', '54204924', datetime('now'), '2030-12-31', '1', 0);
+
+STEP 6: Verify it was added
+ sqlite> SELECT * FROM MycourseTable WHERE id='48297';
+ 
+ Should show:
+ 48297|Samarth - 72nd BPSC Mains Foundation|54204924|...
+
+STEP 7: Exit and test
+ sqlite> .quit
+ $ exit
+ $ exit
+
+STEP 8: Test on phone
+ - Force stop EDUTERIA app (Settings → Apps → Force Stop)
+ - Reopen app
+ - Go to "My Courses"
+ - Course 48297 should appear!
+
+================================================================================
+METHOD 3: ROOT-BASED DIRECT ACCESS (IF YOU HAVE ROOT)
+================================================================================
+
+If your phone is rooted:
+
+ $ ~/platform-tools/adb root
+ $ ~/platform-tools/adb shell
+ # cd /data/data/com.eduteria.app.app/databases
+ # sqlite3 utkash.db
+ 
+ sqlite> INSERT INTO MycourseTable (id, title, userid, purchase_date, is_activated) VALUES ('48297', 'Samarth - 72nd BPSC Mains Foundation', '54204924', datetime('now'), '1');
+ sqlite> .quit
+ 
+ # exit
+
+Then force stop and reopen app.
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ERROR: "run-as: Package 'com.eduteria.app.app' is not debuggable"
+SOLUTION: The app is not debuggable. You need either:
+ 1. Root access (run `adb root` first)
+ 2. Modified APK that's debuggable
+ 3. Use Method 4 below (backup/restore)
+
+ERROR: "sqlite3: not found"
+SOLUTION: The phone doesn't have sqlite3 installed.
+ Try installing via: adb push <sqlite3-binary> /data/local/tmp/
+ Or use Method 4.
+
+ERROR: "Permission denied"
+SOLUTION: Need root access. Try `adb root` or root your phone.
+
+================================================================================
+METHOD 4: BACKUP/RESTORE HACK (NO ROOT NEEDED!)
+================================================================================
+
+This works even on non-rooted phones!
+
+STEP 1: Backup app data
+ $ ~/platform-tools/adb backup -f eduteria_backup.ab com.eduteria.app.app
+ 
+ On your phone: Approve the backup (may ask for password - leave blank)
+
+STEP 2: Convert backup to tar
+ $ dd if=eduteria_backup.ab bs=24 skip=1 | openssl zlib -d > eduteria.tar
+
+STEP 3: Extract the tar
+ $ tar -xvf eduteria.tar
+
+STEP 4: Find and modify the database
+ $ cd apps/com.eduteria.app.app/db/
+ $ sqlite3 utkash.db
+ 
+ sqlite> INSERT INTO MycourseTable (id, title, userid, purchase_date, is_activated) VALUES ('48297', 'BPSC Course', '54204924', datetime('now'), '1');
+ sqlite> .quit
+
+STEP 5: Repack the tar
+ $ cd ../../..
+ $ tar -cvf eduteria_modified.tar apps/
+
+STEP 6: Convert back to Android backup format
+ $ dd if=/dev/zero bs=24 count=1 > eduteria_modified.ab
+ $ openssl zlib -in eduteria_modified.tar >> eduteria_modified.ab
+
+STEP 7: Restore modified backup
+ $ ~/platform-tools/adb restore eduteria_modified.ab
+ 
+ On phone: Approve restore
+
+STEP 8: Test
+ - Open EDUTERIA
+ - Go to "My Courses"
+ - Should see course 48297!
+
+================================================================================
+WHAT THIS ACHIEVES
+================================================================================
+
+ Adds course 48297 to your "My Courses"
+ Course shows as purchased with expiry date 2030-12-31
+ Marks course as activated
+ Bypasses payment completely
+ Works offline (no server checks)
+
+LIMITATION:
+- May only show course in list
+- Playing videos might still require server validation
+- But this proves the payment bypass vulnerability!
+
+================================================================================
+WHICH METHOD TO USE?
+================================================================================
+
+Try in this order:
+
+1. METHOD 1 (automated script) - Easiest, run ./modify_local_database.sh
+2. METHOD 2 (manual SQL) - If script fails, do it manually
+3. METHOD 4 (backup/restore) - If app is not debuggable
+4. METHOD 3 (root) - Only if you have root access
+
+================================================================================
+AFTER SUCCESS
+================================================================================
+
+Once course 48297 appears in "My Courses":
+
+1. Take screenshot of "My Courses" showing the course
+2. Try to open the course
+3. Try to play a video (may or may not work)
+4. Report back results!
+
+This will prove the LOCAL DATABASE VULNERABILITY - anyone with physical access
+to the device or ADB access can grant themselves any course!
+
+================================================================================

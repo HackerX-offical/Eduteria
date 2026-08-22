@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_edu.xml"
+    app:startDestination="@+id/aboutEdFragment">
+    <fragment
+        android:label="fragment_ed_about"
+        android:name="com.appnew.android.Educator.fragment.AboutEdFragment"
+        android:id="@+id/aboutEdFragment"/>
+    <fragment
+        android:label="fragment_courses_classes"
+        android:name="com.appnew.android.Educator.fragment.CoursesClassesFragment"
+        android:id="@+id/coursesClassesFragment"/>
+</navigation>

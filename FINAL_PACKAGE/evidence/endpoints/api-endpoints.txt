@@ -1,0 +1,18 @@
+API ENDPOINTS - EDUTERIA
+========================
+
+BACKEND APIS:
+- Firebase: https://eduteria-b9a30-default-rtdb.firebaseio.com
+- VideoCrypt: appapi.videocrypt.in
+- EasyPay Config: http://sachin.webscript.io/sachin (HTTP - INSECURE)
+- EasyPay Error: https://easypay.paytm.com/paytmAnalytics/logerror
+- EasyPay Event: https://easypay.paytm.com/paytmAnalytics/logevent
+
+PAYMENT GATEWAYS:
+- Paytm
+- BillDesk
+- EaseBuzz
+- FonePay 
+- EasyPay
+
+SOURCE: Decompiled APK strings.xml

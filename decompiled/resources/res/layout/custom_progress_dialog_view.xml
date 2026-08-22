@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="5dp">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/easypay_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:src="@drawable/paytm_assist_icon"
+            android:contentDescription="TODO"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paytm_assist_logo"
+            android:contentDescription="TODO"/>
+        <TextView
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#373737"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Processing Your Request"/>
+        <TextView
+            android:textSize="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:text="please wait"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

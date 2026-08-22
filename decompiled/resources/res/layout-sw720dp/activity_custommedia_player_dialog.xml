@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/root_new"
+        android:background="@color/colorWhite"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp250"
+        android:layout_centerInParent="true"
+        android:keepScreenOn="true">
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/player_view_new"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:resize_mode="fill"
+            app:surface_type="surface_view"/>
+        <ProgressBar
+            android:theme="@style/ProgressBarTheme"
+            android:id="@+id/progress_bar"
+            android:visibility="visible"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/cross"
+            android:background="@color/black"
+            android:padding="@dimen/dp5"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_cross"
+            android:layout_alignParentEnd="true"/>
+        <ImageView
+            android:textColor="@color/white"
+            android:id="@+id/quality"
+            android:padding="@dimen/dp10"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_settings"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="dialog_choose_language_array">
+        <item>@string/english</item>
+        <item>@string/hindi</item>
+        <item>@string/kannada</item>
+        <item>@string/malayalam</item>
+        <item>@string/marathi</item>
+        <item>@string/odia</item>
+        <item>@string/sanskrit</item>
+        <item>@string/tamil</item>
+        <item>@string/urdu</item>
+        <item>@string/bangauli</item>
+        <item>@string/assami</item>
+        <item>@string/gujrati</item>
+        <item>@string/oriya</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="mdcolor_random">
+        <item>#e91e63</item>
+        <item>#fdf501</item>
+        <item>#673ab7</item>
+        <item>#38fd38</item>
+        <item>#5677fc</item>
+        <item>#689f38</item>
+        <item>#03a9f4</item>
+        <item>#ff5722</item>
+        <item>#795548</item>
+        <item>#607d8b</item>
+        <item>#ff9800</item>
+    </array>
+    <array name="speed_values">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1</item>
+        <item>1.25</item>
+        <item>1.5</item>
+        <item>1.75</item>
+        <item>2</item>
+    </array>
+    <array name="speed_values_max">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1</item>
+        <item>1.25</item>
+        <item>1.5</item>
+        <item>1.75</item>
+        <item>2</item>
+        <item>2.25</item>
+        <item>2.5</item>
+        <item>2.75</item>
+        <item>3</item>
+        <item>3.25</item>
+        <item>3.5</item>
+        <item>3.75</item>
+        <item>4</item>
+    </array>
+    <array name="video_playback_speed">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>NORMAL</item>
+        <item>1.25</item>
+        <item>1.5</item>
+        <item>1.75</item>
+        <item>2</item>
+    </array>
+</resources>

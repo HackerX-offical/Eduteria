@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:color="@color/theme_and_header_color">
+    <item>
+        <shape>
+            <solid android:color="@color/unselected_color"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/unselected_color"/>
+        </shape>
+    </item>
+</ripple>

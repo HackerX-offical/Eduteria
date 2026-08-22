@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/pwe_custom_card_gray_background"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:elevation="2dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/root_linear_debit_atm_pin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/pwe_title_color"
+            android:gravity="center"
+            android:id="@+id/text_card_type_label"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Debit + Atm Pin"/>
+        <EditText
+            android:textColor="@color/pwe_text_color"
+            android:textColorHint="@color/pwe_hint_color"
+            android:gravity="center"
+            android:id="@+id/edit_searchview_atm_debit_pin"
+            android:background="@drawable/custom_background_white"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:hint=" Search"
+            android:drawableLeft="0x7f0805f1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/list_atm_debit_pin_banks"
+                android:background="@color/pwe_fragment_background"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:divider="@null"
+                android:focusedByDefault="true"/>
+        </LinearLayout>
+        <include layout="@layout/pwe_pay_button_layout"/>
+    </LinearLayout>
+</LinearLayout>

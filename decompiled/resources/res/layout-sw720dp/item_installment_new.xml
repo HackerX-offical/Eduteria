@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="2dp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/radio_button"
+                android:padding="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="Rs 1500 for 3 Months"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_regular"
+                android:buttonTint="@color/colorPrimary"/>
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/viewButton"
+                android:padding="@dimen/dp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp10"
+                android:text="View"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

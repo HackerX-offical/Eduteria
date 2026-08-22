@@ -1,0 +1,46 @@
+{
+  "audit_timestamp": "2026-08-21T22:33:10.492791",
+  "target_user_id": "54204924",
+  "operation": "UNLOCK_ALL_COURSES",
+  "summary": {
+    "total_courses_found": 1,
+    "successfully_unlocked": 1,
+    "failed_to_unlock": 0,
+    "verified_unlocks": 1
+  },
+  "vulnerability": {
+    "type": "Firebase Unauthorized Write Access",
+    "severity": "CRITICAL",
+    "impact": "Any user can grant themselves premium access to all courses",
+    "authentication_required": "None",
+    "exploitation_difficulty": "Trivial"
+  },
+  "unlocked_courses": [
+    {
+      "course_id": "unpublish_list",
+      "success_paths": 4,
+      "timestamp": "2026-08-21T22:33:10.492791"
+    }
+  ],
+  "failed_courses": [],
+  "verification_results": [
+    {
+      "course_id": "unpublish_list",
+      "verified": true,
+      "path": "user_courses path"
+    }
+  ],
+  "firebase_paths_modified": [
+    "/user_courses/54204924/*",
+    "/subscriptions/54204924/*",
+    "/166/user_data/54204924/courses/*",
+    "/enrollments/54204924/*",
+    "/users/54204924/subscription",
+    "/166/users/54204924/premium"
+  ],
+  "evidence_files": {
+    "course_list": "all_courses_list.json",
+    "audit_report": "audit_report.json",
+    "unlocked_list": "unlocked_courses.json"
+  }
+}

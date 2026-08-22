@@ -1,0 +1,24 @@
+package org.jsoup;
+
+import com.clevertap.android.sdk.Constants;
+import java.io.IOException;
+
+/* JADX INFO: loaded from: classes10.dex */
+public class HttpStatusException extends IOException {
+    private final int statusCode;
+    private final String url;
+
+    public HttpStatusException(String str, int i, String str2) {
+        super(str + ". Status=" + i + ", URL=[" + str2 + Constants.AES_SUFFIX);
+        this.statusCode = i;
+        this.url = str2;
+    }
+
+    public int getStatusCode() {
+        return this.statusCode;
+    }
+
+    public String getUrl() {
+        return this.url;
+    }
+}

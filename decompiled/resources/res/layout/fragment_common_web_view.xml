@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/dp12"
+    android:paddingTop="@dimen/dp16"
+    android:paddingRight="@dimen/dp12"
+    android:paddingBottom="@dimen/dp16"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_back"
+        android:padding="@dimen/dp10"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/back_gray"
+        android:layout_marginStart="@dimen/dp5"
+        app:tint="@color/black"/>
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

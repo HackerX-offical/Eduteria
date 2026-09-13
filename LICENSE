@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 HackerX - Suryanshu Nabheet
+Copyright (c) 2026 Suryanshu Nabheet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,31 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-SECURITY RESEARCH DISCLAIMER:
-
-This software is provided for educational and authorized security research 
-purposes only. Any unauthorized use of these tools and techniques to access 
-computer systems without permission is illegal and punishable under applicable 
-laws including but not limited to:
-
-- Computer Fraud and Abuse Act (CFAA) - United States
-- Information Technology Act, 2000 - India
-- Computer Misuse Act 1990 - United Kingdom
-- Convention on Cybercrime - Europe
-
-The author(s) and HackerX organization assume no liability for misuse of this
-software and documentation. Users are responsible for ensuring they have proper
-authorization before conducting any security testing activities.
-
-All vulnerabilities documented in this repository were discovered during
-authorized penetration testing engagement with proper consent and authorization
-from EDUTERIA.
-
----
-
-HackerX Organization
-Founder: Suryanshu Nabheet
-Specialization: Cybersecurity Research & Penetration Testing

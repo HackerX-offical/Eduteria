@@ -82,7 +82,7 @@ for endpoint in enrollment_endpoints:
                 try:
                     data = r.json()
                     if data.get('status'):
-                        print("  ✓✓✓ SUCCESS!")
+                        print("   SUCCESS!")
                         break
                 except:
                     pass

@@ -18,7 +18,7 @@ evidence_src = Path("../evidence")
 if evidence_src.exists():
     evidence_dst = pkg_dir / "evidence"
     shutil.copytree(evidence_src, evidence_dst)
-    print(f"✓ Copied evidence/ ({sum(1 for _ in evidence_src.rglob('*'))} files)")
+    print(f" Copied evidence/ ({sum(1 for _ in evidence_src.rglob('*'))} files)")
 
 # 2. Copy all scraped data
 data_src = Path("../data")
@@ -27,7 +27,7 @@ if data_src.exists():
     shutil.copytree(data_src, data_dst)
     files = sum(1 for _ in data_src.rglob('*') if _.is_file())
     total_size = sum(f.stat().st_size for f in data_src.rglob('*') if f.is_file()) / 1024 / 1024
-    print(f"✓ Copied data/ ({files} files, {total_size:.1f} MB)")
+    print(f" Copied data/ ({files} files, {total_size:.1f} MB)")
 
 # 3. Copy tools
 tools = ["frida_hook.js", "aes_crypto.py", "../GET_VIDEOS_NOW.txt"]
@@ -37,7 +37,7 @@ for tool in tools:
     src = Path(tool)
     if src.exists():
         shutil.copy(src, tools_dir / src.name)
-        print(f"✓ Copied {tool}")
+        print(f" Copied {tool}")
 
 # 4. Create executive summary
 summary = f"""
@@ -127,12 +127,12 @@ Method 3: APK Patching
 
 TESTING STATUS:
 ---------------
-✓ Static analysis: COMPLETE
-✓ API discovery: COMPLETE  
-✓ Credential extraction: COMPLETE
-✓ Firebase scraping: COMPLETE
-✓ Live validation: COMPLETE
-⚠ Video extraction: REQUIRES DEVICE (tools provided)
+ Static analysis: COMPLETE
+ API discovery: COMPLETE  
+ Credential extraction: COMPLETE
+ Firebase scraping: COMPLETE
+ Live validation: COMPLETE
+ Video extraction: REQUIRES DEVICE (tools provided)
 
 All evidence is authenticated and reproducible.
 All findings have been validated against live systems.
@@ -155,7 +155,7 @@ EDUTERIA
 with open(pkg_dir / "README.txt", "w") as f:
     f.write(summary)
 
-print(f"\n✓ Created README.txt")
+print(f"\n Created README.txt")
 
 # 5. Create file inventory
 inventory = []
@@ -168,7 +168,7 @@ with open(pkg_dir / "FILE_INVENTORY.txt", "w") as f:
     f.write(f"Total files: {len(inventory)}\n")
     f.write("\n".join(sorted(inventory)))
 
-print(f"✓ Created FILE_INVENTORY.txt")
+print(f" Created FILE_INVENTORY.txt")
 
 # 6. Summary stats
 total_files = len(list(pkg_dir.rglob('*')))
@@ -181,8 +181,8 @@ print(f"Location: {pkg_dir.absolute()}")
 print(f"Total files: {total_files}")
 print(f"Total size: {total_size_mb:.2f} MB")
 print("\nThis package contains:")
-print("  ✓ All discovered vulnerabilities with proof")
-print("  ✓ 1.6MB of scraped Firebase data")
-print("  ✓ Tools for video extraction")
-print("  ✓ Complete evidence chain")
+print("   All discovered vulnerabilities with proof")
+print("   1.6MB of scraped Firebase data")
+print("   Tools for video extraction")
+print("   Complete evidence chain")
 print("\nReady for submission to EDUTERIA!")

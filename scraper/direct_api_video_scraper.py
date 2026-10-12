@@ -84,18 +84,18 @@ for i, endpoint in enumerate(endpoints_to_try, 1):
                     json.dump(data, f, indent=2)
                 
                 if data.get("status"):
-                    print(f"     ✓ SUCCESS! {len(str(data))} bytes")
+                    print(f"      SUCCESS! {len(str(data))} bytes")
                     all_video_data[endpoint['name']] = data
                 else:
                     msg = data.get("message", "Unknown error")
-                    print(f"     ✗ {msg}")
+                    print(f"      {msg}")
             except:
                 print(f"     Response: {r.text[:100]}")
         else:
-            print(f"     ✗ HTTP {r.status_code}")
+            print(f"      HTTP {r.status_code}")
             
     except Exception as e:
-        print(f"     ✗ Error: {str(e)[:50]}")
+        print(f"      Error: {str(e)[:50]}")
 
 print("")
 print("[2/3] Searching for video URLs in all data...")
@@ -179,7 +179,7 @@ for vid_id in list(video_ids_found)[:10]:
             if data.get("status") and data.get("data"):
                 url = data['data'].get('url') or data['data'].get('video_url')
                 if url:
-                    print(f"     ✓ Got URL: {url[:60]}...")
+                    print(f"      Got URL: {url[:60]}...")
                     all_urls.add(url)
     except:
         pass
@@ -197,13 +197,13 @@ print("Files saved to:", output_dir)
 print("")
 
 if all_urls:
-    print("✓✓✓ SUCCESS! Video URLs extracted without app!")
+    print(" SUCCESS! Video URLs extracted without app!")
     print("")
     print("Next: Download videos with:")
     print(f"  cd {output_dir}")
     print("  while read url; do wget \"$url\"; done < all_video_urls.txt")
 else:
-    print("⚠ No video URLs found. API may require different approach.")
+    print(" No video URLs found. API may require different approach.")
     print("Check saved JSON files for available data.")
 
 print("")

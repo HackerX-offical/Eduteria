@@ -302,3 +302,8 @@ The authors assume no liability for misuse of this information. Users are respon
 **Assessment Version**: 1.0  
 **Last Updated**: August 2026  
 **Repository**: https://github.com/HackerX-offical/Eduteria.git
+
+## License
+
+Licensed under the [HackerX License](./LICENSE). Redistributions must retain copyright,
+license text, and [NOTICE](./NOTICE) attribution per the license terms.

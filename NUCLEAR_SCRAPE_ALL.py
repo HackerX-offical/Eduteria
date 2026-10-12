@@ -37,8 +37,8 @@ try:
             json.dump(entire_db, f, indent=2)
         
         size_mb = db_file.stat().st_size / (1024*1024)
-        print(f"  ✓ Downloaded entire database: {size_mb:.2f} MB")
-        print(f"  ✓ Saved to: {db_file}")
+        print(f"   Downloaded entire database: {size_mb:.2f} MB")
+        print(f"   Saved to: {db_file}")
         print()
         
         # Parse for useful data
@@ -75,7 +75,7 @@ try:
                     filename = f"COURSE_{COURSE_ID}_data_{len(list(output.glob('COURSE_48297_*')))}.json"
                     with open(output / filename, 'w') as f:
                         json.dump(obj, f, indent=2)
-                    print(f"  ✓ Found course {COURSE_ID} data! Saved: {filename}")
+                    print(f"   Found course {COURSE_ID} data! Saved: {filename}")
                 
                 for k, v in obj.items():
                     extract_content(v, f"{path}/{k}")
@@ -97,10 +97,10 @@ try:
         extract_content(entire_db)
         
         print()
-        print(f"  ✓ Found {len(video_ids)} video IDs")
-        print(f"  ✓ Found {len(video_urls)} video URLs")
-        print(f"  ✓ Found {len(pdf_urls)} PDF URLs")
-        print(f"  ✓ Found {len(content_urls)} other content URLs")
+        print(f"   Found {len(video_ids)} video IDs")
+        print(f"   Found {len(video_urls)} video URLs")
+        print(f"   Found {len(pdf_urls)} PDF URLs")
+        print(f"   Found {len(content_urls)} other content URLs")
         print()
         
         # Save all findings
@@ -117,7 +117,7 @@ try:
         if pdf_urls:
             with open(output / "ALL_PDF_URLS.txt", 'w') as f:
                 f.write('\n'.join(sorted(pdf_urls)))
-            print(f"  ✓ Saved {len(pdf_urls)} PDF URLs")
+            print(f"   Saved {len(pdf_urls)} PDF URLs")
         
         if content_urls:
             with open(output / "ALL_CONTENT_URLS.txt", 'w') as f:
@@ -126,7 +126,7 @@ try:
         print()
 
 except Exception as e:
-    print(f"  ✗ Error: {e}")
+    print(f"   Error: {e}")
     print()
 
 # Strategy 2: Search for all course data
@@ -151,7 +151,7 @@ try:
             if r.status_code == 200:
                 data = r.json()
                 if data and data != "null":
-                    print(f"  ✓ Found courses at: {path}")
+                    print(f"   Found courses at: {path}")
                     
                     # Save it
                     filename = path.replace('/', '_') + '_courses.json'
@@ -164,11 +164,11 @@ try:
         except:
             pass
     
-    print(f"  ✓ Total unique courses found: {len(all_courses)}")
+    print(f"   Total unique courses found: {len(all_courses)}")
     print()
 
 except Exception as e:
-    print(f"  ✗ Error: {e}")
+    print(f"   Error: {e}")
 
 # Strategy 3: Get ALL user data (you're premium now)
 print("[4] Getting ALL your user data...")
@@ -195,13 +195,13 @@ try:
                     filename = 'USER_' + path.replace('/', '_') + '.json'
                     with open(output / filename, 'w') as f:
                         json.dump(data, f, indent=2)
-                    print(f"  ✓ Saved: {filename}")
+                    print(f"   Saved: {filename}")
         except:
             pass
     print()
 
 except Exception as e:
-    print(f"  ✗ Error: {e}")
+    print(f"   Error: {e}")
 
 # Strategy 4: Try to find video content by searching for common patterns
 print("[5] Searching for video content patterns...")
@@ -225,7 +225,7 @@ try:
             if r.status_code == 200:
                 data = r.json()
                 if data and data != "null":
-                    print(f"  ✓ Videos found at: {path}")
+                    print(f"   Videos found at: {path}")
                     
                     # Get full data
                     r2 = requests.get(f"{FIREBASE}{path}.json", timeout=30)
@@ -240,7 +240,7 @@ try:
     print()
 
 except Exception as e:
-    print(f"  ✗ Error: {e}")
+    print(f"   Error: {e}")
 
 print("="*80)
 print("NUCLEAR SCRAPE COMPLETE")
@@ -253,8 +253,8 @@ print()
 files = list(output.glob('*'))
 total_size = sum(f.stat().st_size for f in files if f.is_file()) / (1024*1024)
 
-print(f"✓ Scraped {len(files)} files")
-print(f"✓ Total size: {total_size:.2f} MB")
+print(f" Scraped {len(files)} files")
+print(f" Total size: {total_size:.2f} MB")
 print()
 
 # List important files
@@ -272,21 +272,21 @@ print()
 if (output / "ALL_VIDEO_IDS.json").exists():
     with open(output / "ALL_VIDEO_IDS.json") as f:
         vids = json.load(f)
-    print(f"✓✓✓ FOUND {len(vids)} VIDEO IDs IN DATABASE!")
+    print(f" FOUND {len(vids)} VIDEO IDs IN DATABASE!")
     print(f"    These can potentially be accessed via VideoCrypt API")
     print()
 
 if (output / "ALL_VIDEO_URLS.txt").exists():
     with open(output / "ALL_VIDEO_URLS.txt") as f:
         urls = f.read().strip().split('\n')
-    print(f"✓✓✓ FOUND {len(urls)} DIRECT VIDEO URLs!")
+    print(f" FOUND {len(urls)} DIRECT VIDEO URLs!")
     print(f"    These are REAL video links you can try!")
     print()
 
 if (output / "ALL_PDF_URLS.txt").exists():
     with open(output / "ALL_PDF_URLS.txt") as f:
         pdfs = f.read().strip().split('\n')
-    print(f"✓✓✓ FOUND {len(pdfs)} PDF URLs!")
+    print(f" FOUND {len(pdfs)} PDF URLs!")
     print(f"    Direct download links for course materials!")
     print()
 

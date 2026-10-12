@@ -95,7 +95,7 @@ def get_courses_list(crypto):
     
     if result and result.get('data'):
         courses = result['data']
-        print(f"\n✓ Found {len(courses)} courses")
+        print(f"\n Found {len(courses)} courses")
         
         # Save
         with open(COURSE_DIR / "courses_list.json", "w") as f:
@@ -124,7 +124,7 @@ def get_course_detail(crypto):
             json.dump(result, f, indent=2)
         
         if result.get('data'):
-            print(f"\n✓ Course details retrieved!")
+            print(f"\n Course details retrieved!")
             return result['data']
     
     return None
@@ -153,14 +153,14 @@ def get_video_links(crypto):
         
         if result and result.get('data'):
             all_videos.extend(result['data'])
-            print(f"    ✓ Videos found via {endpoint}")
+            print(f"     Videos found via {endpoint}")
     
     if all_videos:
         # Save
         with open(COURSE_DIR / "videos.json", "w") as f:
             json.dump(all_videos, f, indent=2)
         
-        print(f"\n✓ Total videos: {len(all_videos)}")
+        print(f"\n Total videos: {len(all_videos)}")
         return all_videos
     
     return []
@@ -180,7 +180,7 @@ def try_free_enrollment(crypto):
     result = make_request("/payment/free_transaction", payload, crypto)
     
     if result and result.get('status'):
-        print(f"\n✓ FREE ENROLLMENT SUCCESSFUL!")
+        print(f"\n FREE ENROLLMENT SUCCESSFUL!")
         
         # Save proof
         with open(COURSE_DIR / "enrollment_proof.json", "w") as f:
@@ -188,7 +188,7 @@ def try_free_enrollment(crypto):
         
         return True
     
-    print(f"\n✗ Enrollment failed: {result.get('message') if result else 'No response'}")
+    print(f"\n Enrollment failed: {result.get('message') if result else 'No response'}")
     return False
 
 def download_video(url, filename):
@@ -204,10 +204,10 @@ def download_video(url, filename):
                     f.write(chunk)
             
             size = os.path.getsize(filepath) / (1024*1024)
-            print(f"    ✓ Downloaded: {size:.2f} MB")
+            print(f"     Downloaded: {size:.2f} MB")
             return True
     except Exception as e:
-        print(f"    ✗ Error: {e}")
+        print(f"     Error: {e}")
     
     return False
 
@@ -228,7 +228,7 @@ def extract_and_download_content(videos):
             if download_video(video_url, filename):
                 downloaded += 1
     
-    print(f"\n✓ Downloaded {downloaded} videos")
+    print(f"\n Downloaded {downloaded} videos")
     return downloaded
 
 def generate_access_report(courses, course_data, videos, enrolled):
@@ -265,7 +265,7 @@ CONTENT LOCATION:
 
 STATUS:
 -------
-{'✓ FULL ACCESS ACHIEVED' if (course_data and videos) else '⚠ PARTIAL ACCESS'}
+{' FULL ACCESS ACHIEVED' if (course_data and videos) else ' PARTIAL ACCESS'}
 
 NEXT STEPS:
 -----------
@@ -281,7 +281,7 @@ See individual files for complete data.
     with open(report_path, "w") as f:
         f.write(report)
     
-    print(f"✓ Report saved: {report_path}")
+    print(f" Report saved: {report_path}")
     return report
 
 def main():
@@ -315,12 +315,12 @@ def main():
     
     # Print summary
     if course_data and videos:
-        print("\n✓✓✓ SUCCESS! FULL COURSE ACCESS ACHIEVED ✓✓✓")
+        print("\n SUCCESS! FULL COURSE ACCESS ACHIEVED ")
         print(f"\nCourse Data: {COURSE_DIR}/course_details.json")
         print(f"Videos: {COURSE_DIR}/videos.json")
         print(f"Downloads: {VIDEOS_DIR}/")
     else:
-        print("\n⚠ Partial access - check individual endpoints")
+        print("\n Partial access - check individual endpoints")
 
 if __name__ == "__main__":
     main()

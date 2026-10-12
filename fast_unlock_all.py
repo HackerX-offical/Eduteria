@@ -40,10 +40,10 @@ paths = [
 for path in paths:
     try:
         r = requests.patch(path, json=user_premium_data, timeout=10)
-        status = "✓" if r.status_code == 200 else "✗"
+        status = "" if r.status_code == 200 else ""
         print(f"  {status} {path.split('/')[-2]}/{path.split('/')[-1]}")
     except Exception as e:
-        print(f"  ✗ Error: {e}")
+        print(f"   Error: {e}")
 
 print()
 
@@ -65,7 +65,7 @@ try:
         if unpublish_courses and isinstance(unpublish_courses, list):
             # Add first 50 from unpublish list
             key_courses.extend(unpublish_courses[:50])
-            print(f"  ✓ Added {len(unpublish_courses[:50])} courses from Firebase")
+            print(f"   Added {len(unpublish_courses[:50])} courses from Firebase")
 except:
     pass
 
@@ -93,11 +93,11 @@ for path in batch_paths:
     try:
         r = requests.patch(path, json=batch_unlock, timeout=15)
         if r.status_code == 200:
-            print(f"  ✓ Batch wrote {len(batch_unlock)} courses to {path.split('/')[-2]}")
+            print(f"   Batch wrote {len(batch_unlock)} courses to {path.split('/')[-2]}")
         else:
-            print(f"  ✗ Failed: {r.status_code}")
+            print(f"   Failed: {r.status_code}")
     except Exception as e:
-        print(f"  ✗ Error: {e}")
+        print(f"   Error: {e}")
 
 print()
 
@@ -113,7 +113,7 @@ for path in verify_paths:
         r = requests.get(path, timeout=10)
         if r.status_code == 200:
             data = r.json()
-            print(f"  ✓ {path.split('/')[-2]}/{path.split('/')[-1]}")
+            print(f"   {path.split('/')[-2]}/{path.split('/')[-1]}")
             print(f"    Data: {json.dumps(data, indent=2)[:200]}")
     except:
         pass
@@ -123,8 +123,8 @@ print("="*80)
 print("UNLOCK COMPLETE!")
 print("="*80)
 print()
-print(f"✓ User {USER_ID} marked as PREMIUM")
-print(f"✓ {len(key_courses)} courses unlocked")
+print(f" User {USER_ID} marked as PREMIUM")
+print(f" {len(key_courses)} courses unlocked")
 print()
 print("Firebase paths modified:")
 print(f"  - /users/{USER_ID}")

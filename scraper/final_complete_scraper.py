@@ -39,7 +39,7 @@ for db in firebase_dbs:
         if r.status_code == 200 and r.text and r.text != "null":
             data = r.json()
             size_kb = len(r.text) / 1024
-            print(f"✓ {size_kb:.1f} KB")
+            print(f" {size_kb:.1f} KB")
             
             results["firebase_databases"][db] = {
                 "size_kb": size_kb,
@@ -65,9 +65,9 @@ for db in firebase_dbs:
                 context = data_str[max(0, idx-200):idx+200]
                 results["course_data"][db] = context
         else:
-            print(f"✗ Empty/null")
+            print(f" Empty/null")
     except Exception as e:
-        print(f"✗ Error: {str(e)[:50]}")
+        print(f" Error: {str(e)[:50]}")
     
     time.sleep(0.5)  # Be respectful
 
@@ -96,7 +96,7 @@ try:
     
     if r.status_code == 200:
         files = re.findall(r'<Key>(.*?)</Key>', r.text)
-        print(f"  ✓ S3 accessible: {len(files)} files found")
+        print(f"   S3 accessible: {len(files)} files found")
         
         # Look for course-related files
         course_files = [f for f in files if COURSE_ID in f or 'video' in f.lower()]
@@ -112,9 +112,9 @@ try:
         results["s3_files"] = len(files)
         results["s3_course_files"] = course_files
     else:
-        print(f"  ✗ S3 not accessible ({r.status_code})")
+        print(f"   S3 not accessible ({r.status_code})")
 except Exception as e:
-    print(f"  ✗ S3 error: {e}")
+    print(f"   S3 error: {e}")
 
 print("\n[4/5] Testing video URLs...")
 tested = 0
@@ -123,7 +123,7 @@ working = []
 for url in video_urls[:10]:  # Test first 10
     try:
         r = requests.head(url, timeout=10, allow_redirects=True)
-        status = "✓" if r.status_code == 200 else "✗"
+        status = "" if r.status_code == 200 else ""
         print(f"  {status} {r.status_code}: {url[:60]}...")
         if r.status_code == 200:
             working.append(url)
@@ -229,6 +229,6 @@ print("="*80)
 
 # Print working video URLs if any
 if working:
-    print("\n✓✓✓ WORKING VIDEO URLs FOUND! ✓✓✓")
+    print("\n WORKING VIDEO URLs FOUND! ")
     for url in working:
         print(f"  {url}")

@@ -96,7 +96,7 @@ for endpoint in endpoints:
                     filename = endpoint['name'].replace(' ', '_').lower() + '.json'
                     with open(output / filename, 'w') as f:
                         json.dump(resp, f, indent=2)
-                    print(f"  ✓ Saved to: {filename}")
+                    print(f"   Saved to: {filename}")
             except:
                 print(f"  Response (text): {r.text[:200]}")
         print()
@@ -121,7 +121,7 @@ for path in firebase_paths:
         if r.status_code == 200:
             data = r.json()
             if data and data != "null":
-                print(f"✓ Found data at: {path}")
+                print(f" Found data at: {path}")
                 filename = path.split('/')[-2] + '_' + path.split('/')[-1]
                 with open(output / filename, 'w') as f:
                     json.dump(data, f, indent=2)
@@ -162,7 +162,7 @@ try:
         video_ids = list(set(video_ids))[:10]  # Get first 10 unique
         
         if video_ids:
-            print(f"✓ Found {len(video_ids)} video IDs")
+            print(f" Found {len(video_ids)} video IDs")
             with open(output / 'discovered_video_ids.json', 'w') as f:
                 json.dump(video_ids, f, indent=2)
             print(f"  Sample: {video_ids[:3]}")
@@ -187,7 +187,7 @@ for path in user_paths:
         if r.status_code == 200:
             data = r.json()
             if data and data != "null":
-                print(f"✓ Found enrollment data: {path}")
+                print(f" Found enrollment data: {path}")
                 print(f"  Data: {json.dumps(data, indent=2)[:300]}")
                 
                 filename = 'user_' + path.split('/')[-1]

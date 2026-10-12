@@ -30,7 +30,7 @@ def try_videocrypt_api():
             print(f"  {url}: {r.status_code}")
             if r.status_code == 200:
                 data = r.json()
-                print(f"  ✓ GOT DATA: {str(data)[:200]}")
+                print(f"   GOT DATA: {str(data)[:200]}")
                 return data
         except:
             pass
@@ -56,7 +56,7 @@ def try_jwplayer_patterns():
             print(f"  {vid}: {r.status_code}")
             if r.status_code == 200:
                 data = r.json()
-                print(f"  ✓ FOUND VIDEO: {data.get('title', 'No title')}")
+                print(f"   FOUND VIDEO: {data.get('title', 'No title')}")
                 if 'playlist' in data:
                     for source in data['playlist'][0].get('sources', []):
                         print(f"    VIDEO URL: {source.get('file')}")
@@ -86,7 +86,7 @@ def try_firebase_video_paths():
             r = requests.get(url, timeout=10)
             if r.status_code == 200 and r.text != "null":
                 data = r.json()
-                print(f"  ✓ {path}: Found data")
+                print(f"   {path}: Found data")
                 return data
         except:
             pass
@@ -112,7 +112,7 @@ def try_cloudfront_patterns():
             r = requests.head(url, timeout=10)
             print(f"  {path}: {r.status_code}")
             if r.status_code == 200:
-                print(f"  ✓ FOUND: {url}")
+                print(f"   FOUND: {url}")
                 return url
         except:
             pass
@@ -173,7 +173,7 @@ def try_direct_api_endpoints():
             if r.status_code == 200:
                 try:
                     data = r.json()
-                    print(f"  ✓ GOT DATA: {str(data)[:150]}")
+                    print(f"   GOT DATA: {str(data)[:150]}")
                     return data
                 except:
                     print(f"  Response: {r.text[:150]}")
@@ -206,13 +206,13 @@ def main():
     found_something = False
     for method, data in results.items():
         if data:
-            print(f"✓ {method}: Found data")
+            print(f" {method}: Found data")
             found_something = True
         else:
-            print(f"✗ {method}: No data")
+            print(f" {method}: No data")
     
     if not found_something:
-        print("\n⚠ No direct video URLs found via automated methods")
+        print("\n No direct video URLs found via automated methods")
         print("\nNEXT STEPS:")
         print("1. Manual Firebase exploration (saved to firebase_video_search.json)")
         print("2. Install APK on device and intercept with mitmproxy")

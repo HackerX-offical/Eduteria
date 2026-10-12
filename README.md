@@ -1,9 +1,52 @@
-# EDUTERIA Security Assessment
-**Comprehensive Penetration Testing and Vulnerability Analysis**
+# Eduteria
+
+Authorized Android security assessment: Firebase/API weaknesses, payment bypass research, and reproducible scraper/crypto modules.
+
+## Why this exists
+
+Documents a complete penetration test of the EDUTERIA Android application for defenders and auditors. The repository packages evidence, decompiled references, and small Python utilities so findings can be verified without re-running the full engagement.
+
+## Features
+
+- Structured vulnerability register with CVSS and evidence paths
+- `scraper/` AES and API helpers with unit tests in CI
+- Evidence bundles under `evidence/` and collected assessment data
+
+## Install
+
+```bash
+git clone https://github.com/HackerX-offical/Eduteria.git
+cd Eduteria
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Quick start
+
+```bash
+pytest tests -q
+python3 -c "from scraper.aes_crypto import EduteriaAES; print('ok')"
+```
+
+## Output
+
+Findings tables in this README, JSON/text under `evidence/`, and large artifacts under `data/` / `FINAL_PACKAGE/` where present.
+
+## Develop
+
+```bash
+pytest tests -q
+```
+
+## Architecture
+
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for module layout and extension points.
 
 ---
 
-## Overview
+## Full assessment report
+
+### Overview
 
 This repository documents a complete security assessment of the EDUTERIA Android application, conducted as authorized penetration testing research. The assessment identified critical vulnerabilities in the application's infrastructure, authentication mechanisms, and data security controls.
 

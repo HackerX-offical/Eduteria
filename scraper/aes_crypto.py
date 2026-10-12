@@ -9,6 +9,8 @@ import base64
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
+from scraper.crypto_key_parse import decrypt_password, derive_indexed_string
+
 class EduteriaAES:
     """AES encryption matching EDUTERIA Android app"""
     
@@ -25,70 +27,23 @@ class EduteriaAES:
         print(f"[AES] Key: {self.key[:8]}... IV: {self.iv[:8]}...")
     
     def _decrypt_password(self, encoded_key):
-        """
-        Decrypt the base64 encoded key array
-        From: encryptPassword() in AES.java
-        """
-        # Split by "1090##"
-        parts = encoded_key.split("1090##", 1)
-        if len(parts) != 2:
-            return encoded_key
-        
-        # Get the middle part before "=="
-        middle_parts = parts[1].split("==", 1)
-        if len(middle_parts) < 1:
-            return encoded_key
-        
-        middle = middle_parts[0] + "=="
-        
-        # Decode base64
-        try:
-            decoded = base64.b64decode(middle).decode('utf-8')
-            return decoded
-        except:
-            return middle
-    
+        return decrypt_password(encoded_key)
+
     def _generate_key_api(self):
         """
         Generate API encryption key
         From: generatekeyAPI() in AES.java lines 77-89
         """
-        # Decrypt the array key
         char_array = self._decrypt_password(self.ARRAY_KEY)
-        
-        # Build key from base string
-        result = ""
-        for char in self.BASE_STRING:
-            idx = int(char)
-            if idx < len(char_array):
-                result += char_array[idx]
-        
-        # Pad to 16 bytes
-        while len(result) < 16:
-            result += "0"
-        
-        return result[:16]
+        return derive_indexed_string(char_array, self.BASE_STRING)
     
     def _generate_vector_api(self):
         """
         Generate API encryption IV
         From: generateVectorAPI() in AES.java lines 91-103
         """
-        # Decrypt the array vector
         char_array = self._decrypt_password(self.ARRAY_VECTOR)
-        
-        # Build IV from base string
-        result = ""
-        for char in self.BASE_STRING:
-            idx = int(char)
-            if idx < len(char_array):
-                result += char_array[idx]
-        
-        # Pad to 16 bytes
-        while len(result) < 16:
-            result += "0"
-        
-        return result[:16]
+        return derive_indexed_string(char_array, self.BASE_STRING)
     
     def encrypt(self, data):
         """

@@ -274,34 +274,9 @@ Publication of this research follows responsible disclosure timeline allowing ED
 
 ---
 
-## License
+## Ethics
 
-This research is released under the MIT License. See LICENSE file for complete terms.
-
----
-
-## Disclaimer
-
-This repository is provided for educational and research purposes only. All tools and techniques documented should only be used in authorized security testing environments. 
-
-Unauthorized access to computer systems is illegal under applicable laws including Computer Fraud and Abuse Act (CFAA), Information Technology Act 2000, and similar legislation.
-
-The authors assume no liability for misuse of this information. Users are responsible for ensuring proper authorization before conducting any security testing activities.
-
----
-
-## References
-
-- OWASP Mobile Security Testing Guide
-- CVSS v3.1 Scoring System
-- Firebase Security Documentation
-- Android Security Best Practices
-
----
-
-**Assessment Version**: 1.0  
-**Last Updated**: August 2026  
-**Repository**: https://github.com/HackerX-offical/Eduteria.git
+Use only on systems and content you are **authorized** to access. See [SECURITY.md](./SECURITY.md).
 
 ## License
 

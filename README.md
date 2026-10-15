@@ -15,7 +15,7 @@ Documents a complete penetration test of the EDUTERIA Android application for de
 ## Install
 
 ```bash
-git clone https://github.com/HackerX-offical/Eduteria.git
+git clone https://github.com/HackerX-official/Eduteria.git
 cd Eduteria
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
